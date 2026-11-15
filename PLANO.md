@@ -20,12 +20,13 @@ depois de ter teste passando e de eu revisar o código.
       A\* semântico (com peso `w`). Interface comum e orçamento de cliques.
 - [x] **6. Embeddings** — vetores dos títulos com um modelo multilíngue
       (sentence-transformers), salvos em disco.
-- [ ] **7. Experimento principal** — 100 pares sorteados, todos os agentes,
+- [x] **7. Experimento principal** — 100 pares sorteados, todos os agentes,
       métricas (razão cliques/ótimo, artigos consultados, taxa de sucesso).
 - [ ] **8. Análises do grafo** — componentes fortemente conexas, mundo pequeno
       vs. Erdős–Rényi, graus e hubs, assimetria, ciclo do primeiro link.
-- [ ] **9. Demo** — a turma joga contra os agentes.
-- [ ] **10. Relatório** — provas e resultados.
+- [x] **9. Demo** — a turma joga contra os agentes.
+- [ ] **10. Relatório** — provas e resultados. (Em Markdown com LaTeX, que o
+      GitHub renderiza; fica em `relatorio/relatorio.md`.)
 - [ ] **11. Revisão final.**
 
 ## Decisões
@@ -40,7 +41,12 @@ depois de ter teste passando e de eu revisar o código.
   beco; isso conta como clique.
 - A parte 8 (análises) foi feita antes da 7, enquanto os embeddings
   calculavam.
-
+- Limites do experimento: 50 cliques para os caminhantes e 20.000 consultas
+  para os A\* (~9 s por partida no pior caso; o experimento todo levou 48 min).
+- A API da Wikipédia devolve 429 se as requisições forem rápidas demais; o
+  script do primeiro link espera 1 s entre requisições.
+- A referência humana ainda não foi coletada: a demo grava as partidas da
+  turma em `resultados/humanos.csv`.
 - Os dados pesados (dumps e grafo) ficam fora do repositório, na pasta
   definida por `WIKIRACE_DATA` (padrão: `./data`).
 - Só artigos (namespace 0) entram no grafo. Redirecionamentos viram o artigo
