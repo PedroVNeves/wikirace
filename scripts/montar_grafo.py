@@ -44,9 +44,9 @@ def main():
         "artigo_grau_entrada_max": g.titulo(int(ge.argmax())),
         "sem_links_de_saida": int((gs == 0).sum()),
         "sem_links_de_entrada": int((ge == 0).sum()),
-        "dump": "ptwiki-latest (" + time.strftime(
-            "%Y-%m-%d", time.localtime(
-                (config.DUMPS / "ptwiki-latest-pagelinks.sql.gz").stat().st_mtime)) + ")",
+        "dump": "ptwiki-latest",
+        "baixado_em": time.strftime("%Y-%m-%d", time.localtime(
+            (config.DUMPS / "ptwiki-latest-pagelinks.sql.gz").stat().st_mtime)),
         "segundos": round(time.time() - inicio),
     }
     config.RESULTADOS.mkdir(exist_ok=True)
