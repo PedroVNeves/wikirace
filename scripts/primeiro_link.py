@@ -29,13 +29,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--inicios", type=int, default=150)
     ap.add_argument("--semente", type=int, default=2026)
+    ap.add_argument("--pausa", type=float, default=1.0,
+                    help="segundos entre requisições (a API devolve 429 se for rápido demais)")
     args = ap.parse_args()
 
     titulos = config.TITULOS_TXT.read_text(encoding="utf-8").splitlines()
     rng = np.random.default_rng(args.semente)
     inicios = [titulos[i] for i in rng.choice(len(titulos), args.inicios, replace=False)]
 
-    api = WikipediaAPI(cache=Cache(config.DADOS / "cache_api.sqlite"), pausa=0.05)
+    api = WikipediaAPI(cache=Cache(config.DADOS / "cache_api.sqlite"), pausa=args.pausa)
     f = {}  # o pedaço do grafo funcional que a gente descobriu
 
     def primeiro(t):
