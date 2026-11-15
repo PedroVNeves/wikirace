@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# dados pesados (dumps, grafo, embeddings)
+data/
+*.sql.gz
+*.npz
+*.npy
+
+# relatório (arquivos auxiliares do LaTeX)
+relatorio/*.aux
+relatorio/*.log
+relatorio/*.out
+relatorio/*.toc
+
+.vscode/
+.idea/
+.DS_Store

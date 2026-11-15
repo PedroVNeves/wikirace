@@ -1,0 +1,13 @@
+[project]
+name = "wikirace"
+version = "0.1.0"
+description = "Wikirace na Wikipédia em português: busca exata contra agentes heurísticos"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "rede: testes que precisam de internet (rodar com -m rede)",
+]
+addopts = "-m 'not rede'"
