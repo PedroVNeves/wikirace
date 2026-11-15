@@ -151,7 +151,166 @@ falha na maioria dos pares.
 
 <!-- BONUS -->
 
-<!-- EXPERIMENTO -->
+## 4. Agentes contra a BFS
+
+### 4.1 Montagem
+
+**Pares.** Sorteamos 100 pares $(s, t)$, $s \ne t$, uniformes entre os pares
+**com caminho** (sorteio em $V \times V$ e descarte de quem não tem caminho;
+8 dos 108 sorteados foram descartados, 7,4%, compatível com os 9,1% da seção
+3.1). As distâncias ótimas ficaram entre 3 e 7: 16 pares com $d = 3$, 55 com 4,
+22 com 5, 6 com 6 e 1 com 7.
+
+**Agentes** (`wikirace/agentes.py`). Todos leem os links de um artigo de cada
+vez; cada artigo lido conta como uma **consulta**.
+
+* **Caminhantes** — andam um clique por vez, como uma pessoa: *guloso
+  semântico* (vai para o link de título mais parecido com o do destino),
+  *guloso por grau* (vai para o link com mais links — os hubs) e *passeio
+  aleatório*. Se o destino aparece entre os links, clicam nele. Os gulosos não
+  repetem artigo e, num beco sem saída, apertam "voltar" (conta como clique).
+  Limite: **50 cliques**.
+* **Buscadores** — exploram "de cabeça" e só no fim dizem o caminho: a
+  *BFS bidirecional* (gabarito; usa também os links que *chegam* em cada
+  artigo) e o *A\* semântico* com $f = g + w\,h$, $h = (1 - \cos)/2$
+  (Apêndice A.3), para $w \in \{1, 2, 4, 8\}$. Limite: **20.000 consultas**.
+
+**Semântica.** O cosseno é entre embeddings dos **títulos** (modelo
+multilíngue `paraphrase-multilingual-MiniLM-L12-v2`, 384 dimensões), calculados
+uma vez para os 1,19 milhão de artigos (4,5 min numa GPU de notebook). Só o
+título entra porque é o que o jogador vê no link antes de clicar.
+
+### 4.2 Resultados
+
+| agente | resolvidos (≤ 50 cliques / ≤ 20 mil consultas) | cliques / ótimo (média) | partidas no ótimo | consultas (mediana, todas) |
+|---|---:|---:|---:|---:|
+| BFS bidirecional | **100%** | 1,00 | 100% | **20** |
+| A\* ($w = 8$) | 56% | 1,04 | 86% | 12.457 |
+| A\* ($w = 4$) | 44% | 1,00 | 100% | 20.000 (teto) |
+| A\* ($w = 2$) | 15% | 1,00 | 100% | 20.000 (teto) |
+| A\* ($w = 1$) | 15% | 1,00 | 100% | 20.000 (teto) |
+| Guloso semântico | 10% | 4,80 | 0% | 50 (teto) |
+| Guloso por grau | 1% | 5,50 | 0% | 50 (teto) |
+| Passeio aleatório | 1% | 16,0 | 0% | 50 (teto) |
+
+A razão cliques/ótimo é só sobre as partidas que o agente terminou. Taxa de
+sucesso por distância ótima:
+
+| agente | $d = 3$ | $d = 4$ | $d = 5$ | $d \ge 6$ |
+|---|---:|---:|---:|---:|
+| A\* ($w = 1$ e $2$) | 94% | 0% | 0% | 0% |
+| A\* ($w = 4$) | 100% | 51% | 0% | 0% |
+| A\* ($w = 8$) | 94% | 65% | 23% | 0% |
+| Guloso semântico | 25% | 9% | 0% | 14% (1 de 7) |
+
+![curva de sucesso](figuras/curva_sucesso.png)
+
+![troca](figuras/tradeoff.png)
+
+### 4.3 O que os números dizem
+
+**1. A busca exata é imbatível — porque olha dos dois lados.** A BFS
+bidirecional resolve tudo lendo uma mediana de **20 artigos** (máximo 338). O
+segredo está no Lema 3: cada lado só precisa chegar até mais ou menos a metade
+da distância, e as bolas crescem exponencialmente com o raio. Além disso, a
+regra de expandir sempre a fronteira menor gasta as consultas do lado que está
+barato — e o lado do destino costuma ser barato, porque o grau de entrada
+típico é pequeno (mediana 10). Nenhum outro agente usa a informação "quem linka
+para o destino", e é ela que faz a diferença.
+
+**2. O A\* confirma a teoria, mas paga caro sem o lado de trás.** Em **todas**
+as 130 partidas que os A\* terminaram vale cliques $\le w \cdot$ ótimo
+(Teorema 3); com $w \le 4$ o caminho foi sempre o ótimo e com $w = 8$ o pior
+caso foi 1,33× o ótimo. O problema é o custo: buscando só a partir da origem,
+com $w = 1$ ou $2$ (heurística admissível, comportamento de BFS) o A\* precisa
+expandir praticamente todos os artigos a distância $< d$ antes de tirar o
+destino da fila. Pelo histograma da seção 3.2, isso é ~0,6% dos artigos para
+$d = 3$ (uns 6 mil — e a mediana observada foi de ~5.900 consultas) mas ~19%
+para $d = 4$ (uns 200 mil), muito acima do teto de 20 mil. Por isso só os
+pares com $d = 3$ couberam. Aumentar $w$ deixa a semântica guiar
+mais: com $w = 8$ resolvemos 56% dos pares, gastando 1.210 consultas (mediana
+das vitórias) em vez de ~5.900 — e perdendo só 4% de cliques em média. É a
+troca prevista: abrir mão da admissibilidade compra exploração, e o limite
+$w \cdot$ ótimo mostrou ser bem pessimista na prática.
+
+**3. O guloso semântico explora pouco, mas se perde.** Ele lê no máximo 50
+artigos (é um caminhante), mas termina só 10% dos pares e, quando termina,
+usa em média **4,8× o ótimo**. Olhando as caminhadas, o erro típico é o
+máximo local do contraexemplo do Apêndice A.4, só que na vida real:
+
+* *Roberto Farias → Praia de Almádena* (uma praia do Algarve): o agente chega
+  rápido em praias… da **Bahia** (Praia do Porto da Barra, Praia de Piatã, …) e
+  fica passeando entre elas, porque todas "parecem" com o destino.
+* *Crevant-Laveine → Hallucigenia sparsa* (um fóssil do Cambriano): o modelo
+  acha "Hallucigenia" parecido com **"Alucinação"**, e o agente acaba em
+  "Alucinação (inteligência artificial)" e "Cérebro positrônico". O ótimo era
+  França → Antártida → Cambriano → Hallucigenia.
+* *Écublens (Vaud) → Hyundai Mighty* (um caminhão): ele acerta o assunto
+  (automóveis) mas fica rodando entre Peugeot e Toyota.
+
+O título sozinho diz "do que trata" o destino, mas não diz **como chegar**:
+falta a estratégia que um humano usa, de subir para um artigo geral e depois
+descer.
+
+**4. Hubs sozinhos não bastam.** O guloso por grau quase nunca termina (1%):
+sempre ir para o maior artigo leva aos mesmos hubs (Estados Unidos, Brasil,
+...), que estão a 1–2 cliques de quase tudo, mas ele não tem como escolher o
+link certo para descer. E o passeio aleatório, como esperado, praticamente
+não chega a lugar nenhum em 50 cliques num grafo de 1,2 milhão de vértices.
+
+**Resposta à pergunta central.** Os agentes que andam "por intuição" (com no
+máximo 50 consultas) ficam longe do ótimo: o melhor deles, o guloso semântico,
+termina 10% das corridas usando 4,8× mais cliques. Para chegar perto do ótimo
+(≤ 1,04×) com a mesma intuição semântica, o A\* precisou ler **da ordem de mil
+artigos** por corrida — contra 20 da BFS bidirecional, que não usa intuição
+nenhuma mas olha a corrida pelos dois lados.
+
+### 4.4 Referência humana
+
+A demo (`scripts/jogar.py`) deixa a turma jogar exatamente os 100 pares do
+experimento e grava cada partida em `resultados/humanos.csv` (cliques, artigos
+lidos, tempo e caminho). **As partidas da turma ainda não foram coletadas**:
+esta seção será preenchida depois da apresentação. Uma partida de teste no par
+da proposta (Pelé → Mecânica quântica) mostrou a comparação que a demo imprime
+no fim:
+
+| jogador | cliques | artigos lidos |
+|---|---:|---:|
+| humano (teste) | 2 | 2 |
+| guloso semântico | 3 | 3 |
+| A\* ($w = 4$) | 2 | 293 |
+| guloso por grau | não chegou | 50 |
+
+### 4.5 Limitações
+
+* **Teto de consultas.** Os 20.000 do A\* foram escolhidos pelo tempo de
+  execução (~9 s por partida com $w = 1$); com mais orçamento os A\* resolveriam
+  mais pares. As taxas de sucesso dos A\* valem "para esse orçamento".
+* **Só o título.** Usar o texto do artigo (ou o resumo) nos embeddings
+  provavelmente ajudaria os agentes semânticos; preferimos o título por ser a
+  informação disponível antes do clique.
+* **Pares uniformes.** Pares sorteados são, em geral, artigos obscuros
+  (vilarejos, espécies, navios); num Wikirace "de festa" os pares costumam ser
+  mais famosos e mais fáceis para os gulosos.
+* **Ao vivo vs. dump.** O experimento usa o grafo do dump de 01/11/2026; o
+  ambiente ao vivo (`wikirace/ao_vivo.py`) roda os mesmos agentes pela API,
+  mas os links da Wikipédia mudam todo dia.
+
+## 5. Conclusão
+
+Modelar a Wikipédia como grafo dirigido explica bem o jogo: é um mundo pequeno
+(distância típica 4, 98,6% dos pares a no máximo 6 cliques), quase todo numa
+única componente fortemente conexa (90,9%), segurado por uns poucos milhares de
+hubs, e com distâncias bem assimétricas. A teoria também se confirmou nos dados:
+a BFS (bidirecional) é exata e baratíssima, e o A\* ponderado respeitou o
+limite $w \cdot$ ótimo em todas as partidas. Já a "intuição" semântica, sozinha,
+é uma heurística ruim para andar clique a clique: ela sabe *onde fica* o
+destino, mas cai em máximos locais. O que mais ajudou foi justamente a
+informação que nenhum caminhante tem — os links que chegam no destino.
+
+**Próximos passos:** um agente "humano" (sobe para um hub, depois desce pela
+semântica), embeddings do texto do artigo, A\* bidirecional, e as partidas da
+turma.
 
 ## Apêndice A — Provas
 
