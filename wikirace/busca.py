@@ -52,15 +52,22 @@ def caminho_pelos_pais(pai, s, t):
     return cam[::-1]
 
 
-def bfs_niveis(g, s, max_nivel=None):
+def bfs_niveis(g, s, max_nivel=None, bloqueados=None):
     """Distâncias a partir de ``s`` (ou de uma lista de fontes) camada por camada.
 
     Em vez de tirar um vértice por vez da fila, expande a fronteira inteira
     de uma vez: junta todos os vizinhos com fancy indexing, filtra os que já
     têm distância e marca os novos com ``nivel + 1``.
+
+    ``bloqueados`` (máscara booleana) faz a BFS fingir que esses vértices não
+    existem — igual a rodar em ``g.sem_vertices(...)``, mas sem montar outro
+    grafo com 80 milhões de arestas.
     """
     dist = np.full(g.n, INF, dtype=np.int32)
     fronteira = np.unique(np.atleast_1d(np.asarray(s, dtype=np.int64)))
+    if bloqueados is not None:
+        fronteira = fronteira[~bloqueados[fronteira]]
+        dist[bloqueados] = -2  # "já visto": nunca entra na fronteira
     dist[fronteira] = 0
     nivel = 0
     while fronteira.size and (max_nivel is None or nivel < max_nivel):
@@ -76,6 +83,8 @@ def bfs_niveis(g, s, max_nivel=None):
         nivel += 1
         dist[novos] = nivel
         fronteira = novos.astype(np.int64)
+    if bloqueados is not None:
+        dist[bloqueados] = INF
     return dist
 
 
