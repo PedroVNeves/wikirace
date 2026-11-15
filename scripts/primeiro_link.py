@@ -43,9 +43,13 @@ def main():
             f[t] = api.primeiro_link(t)
         return f[t]
 
-    corridas = []
+    corridas, falhas = [], []
     for i, t in enumerate(inicios):
-        cauda, ciclo = analises.segue_ate_ciclo(primeiro, t, max_passos=500)
+        try:
+            cauda, ciclo = analises.segue_ate_ciclo(primeiro, t, max_passos=500)
+        except RuntimeError as e:  # API fora do ar mesmo depois das tentativas
+            falhas.append({"inicio": t, "erro": str(e)})
+            continue
         corridas.append({"inicio": t, "passos_ate_ciclo": len(cauda),
                          "ciclo": list(analises.ciclo_canonico(ciclo))})
         if (i + 1) % 25 == 0:
@@ -55,10 +59,13 @@ def main():
     filosofia = sum("Filosofia" in c["ciclo"] or "Filosofia" in _caminho(f, c["inicio"])
                     for c in corridas)
     # confere o lema: no pedaço descoberto (fechado por f), cada componente tem 1 ciclo
-    fechado = {v: w for v, w in f.items() if w is not None and w in f}
+    fechado = {v: w for v, w in f.items() if w is not None}
+    while any(w not in fechado for w in fechado.values()):
+        fechado = {v: w for v, w in fechado.items() if w in fechado}
     comps = analises.componentes_funcionais(fechado)
     saida = {
         "inicios": len(inicios),
+        "falhas_de_rede": falhas,
         "artigos_visitados": len(f),
         "requisicoes": api.requisicoes,
         "sem_primeiro_link": sum(1 for c in corridas if not c["ciclo"]),
