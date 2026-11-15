@@ -61,8 +61,8 @@ def jogar(partida, amb):
             print(f"\nLimite de {LIMITE_CLIQUES} cliques.")
             return
         links = partida.links()
-        print(f"\n[{partida.cliques} cliques] Você está em: {amb.nome(partida.atual)}"
-              f"  ({len(links)} links)   destino: {amb.nome(partida.destino)}")
+        print(f"\n[{partida.cliques} cliques] Você está em: {bonito(amb.nome(partida.atual))}"
+              f"  ({len(links)} links)   destino: {bonito(amb.nome(partida.destino))}")
         cmd = input("filtro / número / < / desisto > ").strip()
         if cmd == "desisto":
             return
@@ -123,7 +123,7 @@ def main():
     emb = semantica.carregar_embeddings(config.EMBEDDINGS_NPY)
     amb = AmbienteGrafo(g, emb)
     s, t = escolher_par(g, args)
-    print(f"\nWIKIRACE: de {g.titulo(s)} até {g.titulo(t)}")
+    print(f"\nWIKIRACE: de {bonito(g.titulo(s))} até {bonito(g.titulo(t))}")
 
     if args.ao_vivo:
         from wikirace.api import Cache, WikipediaAPI
