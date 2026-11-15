@@ -1,0 +1,20 @@
+{
+  "pares": 100,
+  "semente": 2026,
+  "descartados_sem_caminho": 8,
+  "fracao_sem_caminho_estimada": 0.07407407407407407,
+  "max_cliques": 50,
+  "max_consultas": 20000,
+  "agentes": [
+    "bfs_bidirecional",
+    "a_estrela_w1",
+    "a_estrela_w2",
+    "a_estrela_w4",
+    "a_estrela_w8",
+    "guloso_semantico",
+    "guloso_grau",
+    "aleatorio"
+  ],
+  "modelo_embeddings": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "segundos": 2858
+}

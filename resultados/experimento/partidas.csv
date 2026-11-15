@@ -1,0 +1,801 @@
+par,agente,otimo,sucesso,cliques,consultados,segundos,motivo,caminho,razao
+0,bfs_bidirecional,5,True,5.0,29,0.0016,,Écublens_(Vaud) → Comunas_da_Suíça → Lista_de_freguesias_de_Portugal → Tramagal → Mitsubishi_Fuso_Canter → Hyundai_Mighty,1.0
+0,a_estrela_w1,5,False,,20000,6.877,limite de consultas,,
+0,a_estrela_w2,5,False,,20000,4.7218,limite de consultas,,
+0,a_estrela_w4,5,False,,20000,4.3612,limite de consultas,,
+0,a_estrela_w8,5,False,,20000,4.3621,limite de consultas,,
+0,guloso_semantico,5,False,,50,0.0145,limite de cliques,,
+0,guloso_grau,5,False,,50,0.0248,limite de cliques,,
+0,aleatorio,5,False,,49,0.0004,limite de cliques,,
+1,bfs_bidirecional,4,True,4.0,74,0.0003,,Roberto_Farias → Brasileiros → Algarve → Praia_da_Falésia → Praia_de_Almádena,1.0
+1,a_estrela_w1,4,False,,20000,7.7798,limite de consultas,,
+1,a_estrela_w2,4,False,,20000,7.1803,limite de consultas,,
+1,a_estrela_w4,4,False,,20000,6.9265,limite de consultas,,
+1,a_estrela_w8,4,True,4.0,1523,0.6348,,Roberto_Farias → Brasileiros → Algarve → Praia_da_Rocha → Praia_de_Almádena,1.0
+1,guloso_semantico,4,False,,50,0.0094,limite de cliques,,
+1,guloso_grau,4,False,,50,0.0167,limite de cliques,,
+1,aleatorio,4,False,,50,0.0004,limite de cliques,,
+2,bfs_bidirecional,6,True,6.0,176,0.0005,,Fornilho → Língua_castelhana → Buenos_Aires → Moscovo → Metropolitano_de_Moscovo → Linha_Serpukhovsko-Timiriasevskaia_(metro_de_Moscovo) → Estação_Ulitsa_Starokatchalovskaia,1.0
+2,a_estrela_w1,6,False,,20000,5.7224,limite de consultas,,
+2,a_estrela_w2,6,False,,20000,5.9469,limite de consultas,,
+2,a_estrela_w4,6,False,,20000,5.644,limite de consultas,,
+2,a_estrela_w8,6,False,,20000,5.1626,limite de consultas,,
+2,guloso_semantico,6,True,29.0,29,0.0086,,"Fornilho → Mina_terrestre → Espaldão → Castelo → Palácio_do_Conde_de_Azarujinha → Palácio_de_Seteais → Marquês_de_Marialva → Marquês_de_Penalva → Marquês_de_Lavradio → Marquês_de_Gouveia → Martinho_Mascarenhas,_6.º_Marquês_de_Gouveia → Marquês_de_Alorna → Conde_de_Vila_Nova_de_Portimão → José_Maria_da_Piedade_de_Lancastre_Silveira_Castelo_Branco_de_Almeida_Sá_e_Meneses → Lapa_(Lisboa) → Estrela_(Lisboa) → Castelo_(Lisboa) → Município → Oblast → Eslavos → Łacinka → Ł → Sílaba → Prosódia → Arquétipo → Sabina_Spielrein → Moscovo → Estação_Kievskaia_(linha_Kolhtsevaia) → Estação_Serpukhovskaia → Estação_Ulitsa_Starokatchalovskaia",4.833333333333333
+2,guloso_grau,6,False,,50,0.0151,limite de cliques,,
+2,aleatorio,6,False,,50,0.0003,limite de cliques,,
+3,bfs_bidirecional,5,True,5.0,15,0.0003,,Crevant-Laveine → França → Antártida → Cambriano → Hallucigenia → Hallucigenia_sparsa,1.0
+3,a_estrela_w1,5,False,,20000,5.1846,limite de consultas,,
+3,a_estrela_w2,5,False,,20000,4.8374,limite de consultas,,
+3,a_estrela_w4,5,False,,20000,4.9411,limite de consultas,,
+3,a_estrela_w8,5,False,,20000,5.9415,limite de consultas,,
+3,guloso_semantico,5,False,,50,0.0081,limite de cliques,,
+3,guloso_grau,5,False,,50,0.032,limite de cliques,,
+3,aleatorio,5,False,,50,0.0021,limite de cliques,,
+4,bfs_bidirecional,4,True,4.0,15,0.002,,Robert_Smirke → 18_de_abril → Ceará → Fagner → Demais,1.0
+4,a_estrela_w1,4,False,,20000,6.6757,limite de consultas,,
+4,a_estrela_w2,4,False,,20000,5.1037,limite de consultas,,
+4,a_estrela_w4,4,False,,20000,5.3726,limite de consultas,,
+4,a_estrela_w8,4,False,,20000,4.7404,limite de consultas,,
+4,guloso_semantico,4,False,,50,0.0074,limite de cliques,,
+4,guloso_grau,4,False,,50,0.0208,limite de cliques,,
+4,aleatorio,4,False,,49,0.0012,limite de cliques,,
+5,bfs_bidirecional,5,True,5.0,164,0.0044,,Esperança_(série) → Sociedade_Independente_de_Comunicação → 8_de_março → Joe_DiMaggio → Prêmio_de_Jogador_Mais_Valioso_da_Major_League_Baseball → Hank_Sauer,1.0
+5,a_estrela_w1,5,False,,20000,5.1646,limite de consultas,,
+5,a_estrela_w2,5,False,,20000,4.6584,limite de consultas,,
+5,a_estrela_w4,5,False,,20000,10.1623,limite de consultas,,
+5,a_estrela_w8,5,False,,20000,9.4607,limite de consultas,,
+5,guloso_semantico,5,False,,50,0.0303,limite de cliques,,
+5,guloso_grau,5,False,,50,0.023,limite de cliques,,
+5,aleatorio,5,False,,50,0.0019,limite de cliques,,
+6,bfs_bidirecional,4,True,4.0,28,0.0013,,Lois_Abbingh → 13_de_agosto → Década_de_2020 → Sony_Pictures_Animation → Fixed_(filme),1.0
+6,a_estrela_w1,4,False,,20000,11.5611,limite de consultas,,
+6,a_estrela_w2,4,False,,20000,12.2232,limite de consultas,,
+6,a_estrela_w4,4,True,4.0,6119,6.8188,,Lois_Abbingh → Rio_de_Janeiro → Conglomerado_de_mídia → Sony_Pictures_Animation → Fixed_(filme),1.0
+6,a_estrela_w8,4,True,4.0,2483,2.8935,,Lois_Abbingh → Rio_de_Janeiro → Conglomerado_de_mídia → Sony_Pictures_Animation → Fixed_(filme),1.0
+6,guloso_semantico,4,False,,50,0.0148,limite de cliques,,
+6,guloso_grau,4,False,,50,0.0214,limite de cliques,,
+6,aleatorio,4,False,,50,0.0011,limite de cliques,,
+7,bfs_bidirecional,3,True,3.0,3,0.0002,,Línguas_coreânicas → Estados_Unidos → Caribe → Solenodontidae,1.0
+7,a_estrela_w1,3,True,3.0,10065,6.6011,,Línguas_coreânicas → Estados_Unidos → Mamíferos → Solenodontidae,1.0
+7,a_estrela_w2,3,True,3.0,9463,5.6245,,Línguas_coreânicas → Estados_Unidos → Mamíferos → Solenodontidae,1.0
+7,a_estrela_w4,3,True,3.0,95,0.0758,,Línguas_coreânicas → Estados_Unidos → Mamíferos → Solenodontidae,1.0
+7,a_estrela_w8,3,True,3.0,215,0.1156,,Línguas_coreânicas → Estados_Unidos → Mamíferos → Solenodontidae,1.0
+7,guloso_semantico,3,True,39.0,39,0.0129,,Línguas_coreânicas → Línguas_paleossiberianas → Línguas_austronésias → Austronésios → Sundaneses → Língua_sundanesa → Fonema → Dialeto_fluminense → Fricativa_alveolar_surda → Fricativa_sibilante_alveolopalatal_surda → Africada_alveolar_não_sibilante_surda → Sicília → Apeninos → Montes_Apenninus → Montes_Carpatus → Cárpatos → RMS_Carpathia → Tentacolino → Halomonas_titanicae → Halomonadaceae → Ordem_(biologia) → Zootaxonomia → Zoologia → Echinodermata → Pteridophyta → Marattiidae → Ophioglossidae → Polypodiidae → Gnetidae → Sundacarpus → Pinopsida → Callitroideae → Callitris_neocaledonica → Espécie_dependente_de_conservação → Espécie_extinta_na_natureza → Elaphurus_davidianus → Neotragus_pygmaeus → Muntiacus_putaoensis → Mamíferos → Solenodontidae,13.0
+7,guloso_grau,3,False,,50,0.0205,limite de cliques,,
+7,aleatorio,3,False,,50,0.0009,limite de cliques,,
+8,bfs_bidirecional,5,True,5.0,55,0.0018,,Onthophagus_denticulatus → Besouro → Austrália → 3_de_setembro → Gusttavo_Lima → Não_Paro_de_Beber,1.0
+8,a_estrela_w1,5,False,,20000,11.0291,limite de consultas,,
+8,a_estrela_w2,5,False,,20000,10.2034,limite de consultas,,
+8,a_estrela_w4,5,False,,20000,7.8097,limite de consultas,,
+8,a_estrela_w8,5,False,,20000,8.6504,limite de consultas,,
+8,guloso_semantico,5,False,,50,0.1783,limite de cliques,,
+8,guloso_grau,5,False,,50,0.2622,limite de cliques,,
+8,aleatorio,5,False,,50,0.005,limite de cliques,,
+9,bfs_bidirecional,3,True,3.0,3,0.0004,,Memorial_(álbum) → Portugal → UOL → PagBank,1.0
+9,a_estrela_w1,3,True,3.0,5541,5.24,,Memorial_(álbum) → Portugal → UOL → PagBank,1.0
+9,a_estrela_w2,3,True,3.0,5499,4.4215,,Memorial_(álbum) → Portugal → UOL → PagBank,1.0
+9,a_estrela_w4,3,True,3.0,294,0.2602,,Memorial_(álbum) → Portugal → UOL → PagBank,1.0
+9,a_estrela_w8,3,True,3.0,276,0.2067,,Memorial_(álbum) → Portugal → UOL → PagBank,1.0
+9,guloso_semantico,3,False,,50,0.0184,limite de cliques,,
+9,guloso_grau,3,False,,50,0.0232,limite de cliques,,
+9,aleatorio,3,True,48.0,48,0.0013,,Memorial_(álbum) → 2007 → 30_de_março → 26_de_outubro → Dylan_McDermott → Hiroyuki_Sanada → Base_Virtual_Internacional_de_Autoridade → Haia → Irlanda → Europol → Instituto_de_Harmonização_do_Mercado_Interno → 2008 → Bobby_Fischer → Lista_dos_Campeonatos_Mundiais_de_Xadrez → Haarlem → Culinária → Culinária_da_Suécia → Coroa_sueca → San_Marino → Voleibol → Liga_das_Nações_de_Voleibol_Masculino → Challenger_Cup_de_Voleibol_Feminino_de_2024 → Challenger_Cup_de_Voleibol_Masculino → Seleção_Eslovena_de_Voleibol_Masculino → Liga_Mundial_de_Voleibol_de_2017 → Antuérpia → Kasterlee → Arrondissement → Paróquia_(divisão_administrativa) → Territórios_federais_do_Brasil → Lista_de_partidos_políticos_brasileiros_extintos → Plínio_Salgado → Lista_de_deputados_federais_do_Brasil_da_43.ª_legislatura → Israel_Pinheiro_Filho → Movimento_Democrático_Brasileiro_(1980) → Impeachment_de_Dilma_Rousseff → Programa_de_Investimento_em_Logística → Operação_Lava_Jato → Motiva_Trilhos_(Linha_4) → Embu-Guaçu → Escravidão_no_Brasil → Agência_(sociologia) → Mudança_social → Acumulação_de_capital → Fundo_de_Investimento_Imobiliário → Empréstimo_predatório → Taxa_de_câmbio → Cartão_de_crédito → PagBank,16.0
+10,bfs_bidirecional,5,True,5.0,24,0.0022,,Francisco_de_Paula_de_Portugal_e_Castro → 21_de_abril → Arquidiocese_de_Pisa → Arquidiocese_de_Benevento → Giuseppe_Bologna → Michele_de_Bologna,1.0
+10,a_estrela_w1,5,False,,20000,11.7507,limite de consultas,,
+10,a_estrela_w2,5,False,,20000,10.1798,limite de consultas,,
+10,a_estrela_w4,5,False,,20000,9.1743,limite de consultas,,
+10,a_estrela_w8,5,False,,20000,8.5878,limite de consultas,,
+10,guloso_semantico,5,False,,50,0.0179,limite de cliques,,
+10,guloso_grau,5,False,,50,0.0194,limite de cliques,,
+10,aleatorio,5,False,,50,0.001,limite de cliques,,
+11,bfs_bidirecional,4,True,4.0,7,0.0004,,A_Mão_do_Diabo_(livro) → Outubro → 29_de_março → Guerra_Civil_no_Sudão_(2023–presente) → Abdul_Rahim_Dagalo,1.0
+11,a_estrela_w1,4,False,,20000,9.0171,limite de consultas,,
+11,a_estrela_w2,4,False,,20000,9.9565,limite de consultas,,
+11,a_estrela_w4,4,False,,20000,8.5481,limite de consultas,,
+11,a_estrela_w8,4,False,,20000,7.8677,limite de consultas,,
+11,guloso_semantico,4,False,,50,0.0229,limite de cliques,,
+11,guloso_grau,4,False,,50,0.0323,limite de cliques,,
+11,aleatorio,4,False,,49,0.0014,limite de cliques,,
+12,bfs_bidirecional,4,True,4.0,10,0.0005,,Agenvillers → França → Suécia → Fredrik_Reinfeldt → Österhaninge,1.0
+12,a_estrela_w1,4,False,,20000,9.2321,limite de consultas,,
+12,a_estrela_w2,4,False,,20000,8.7189,limite de consultas,,
+12,a_estrela_w4,4,False,,20000,8.8556,limite de consultas,,
+12,a_estrela_w8,4,False,,20000,8.9792,limite de consultas,,
+12,guloso_semantico,4,False,,50,0.0116,limite de cliques,,
+12,guloso_grau,4,False,,50,0.0303,limite de cliques,,
+12,aleatorio,4,False,,50,0.001,limite de cliques,,
+13,bfs_bidirecional,4,True,4.0,26,0.0016,,Manuel_Quiroga_Losada → Espanha → Reino_Unido → Pax_Britannica → Relações_entre_Espanha_e_Reino_Unido,1.0
+13,a_estrela_w1,4,False,,20000,10.6479,limite de consultas,,
+13,a_estrela_w2,4,False,,20000,10.3375,limite de consultas,,
+13,a_estrela_w4,4,True,4.0,6804,5.638,,Manuel_Quiroga_Losada → Espanha → Portugal → Relações_entre_Espanha_e_Portugal → Relações_entre_Espanha_e_Reino_Unido,1.0
+13,a_estrela_w8,4,True,4.0,162,0.0885,,Manuel_Quiroga_Losada → Espanha → Guerras_de_independência_na_América_espanhola → Relações_entre_Portugal_e_Reino_Unido → Relações_entre_Espanha_e_Reino_Unido,1.0
+13,guloso_semantico,4,True,25.0,25,0.0117,,Manuel_Quiroga_Losada → Espanha → Relações_internacionais_da_Espanha → Ministério_de_Assuntos_Exteriores_e_de_Cooperação_da_Espanha → Política_da_Espanha → Comarcas_da_Espanha → As_Povoações_Mais_Bonitas_de_Espanha → Províncias_da_Espanha → Córdova_(província_da_Espanha) → Estremadura_(Espanha) → Fronteira_Espanha–Portugal → Relevo_da_Espanha → Fronteira_Espanha–França → Organização_territorial_de_Espanha → Fronteira_Espanha–Marrocos → Municípios_da_Espanha → História_da_Espanha → Governo_da_Espanha → Esporte_na_Espanha → Bandeira_da_Espanha → Espanha_Franquista → El_Mundo_(Espanha) → Meios_de_comunicação → Portugal → Relações_entre_Espanha_e_Portugal → Relações_entre_Espanha_e_Reino_Unido,6.25
+13,guloso_grau,4,False,,50,0.0249,limite de cliques,,
+13,aleatorio,4,False,,47,0.001,limite de cliques,,
+14,bfs_bidirecional,4,True,4.0,20,0.0008,,"Glyphaea → Género_(biologia) → Nova_Iorque → Theme_from_New_York,_New_York → There_Is_A_Time",1.0
+14,a_estrela_w1,4,False,,20000,8.4795,limite de consultas,,
+14,a_estrela_w2,4,False,,20000,8.8446,limite de consultas,,
+14,a_estrela_w4,4,False,,20000,8.9195,limite de consultas,,
+14,a_estrela_w8,4,False,,20000,9.6379,limite de consultas,,
+14,guloso_semantico,4,False,,50,0.0525,limite de cliques,,
+14,guloso_grau,4,False,,50,0.0744,limite de cliques,,
+14,aleatorio,4,False,,50,0.0032,limite de cliques,,
+15,bfs_bidirecional,4,True,4.0,4,0.0006,,Igreja_de_Santa_Maria_(Óbidos) → Barroco → Munique → Rottal-Inn → Roßbach_(Baviera),1.0
+15,a_estrela_w1,4,False,,20000,10.0687,limite de consultas,,
+15,a_estrela_w2,4,False,,20000,9.3275,limite de consultas,,
+15,a_estrela_w4,4,False,,20000,9.9404,limite de consultas,,
+15,a_estrela_w8,4,False,,20000,9.6095,limite de consultas,,
+15,guloso_semantico,4,False,,50,0.0364,limite de cliques,,
+15,guloso_grau,4,False,,50,0.0462,limite de cliques,,
+15,aleatorio,4,False,,49,0.0011,limite de cliques,,
+16,bfs_bidirecional,4,True,4.0,15,0.0014,,Bruno_Götze → 1913 → Mato_Grosso → Real_Forte_Príncipe_da_Beira → Joaquim_Lopes_Poupino,1.0
+16,a_estrela_w1,4,False,,20000,11.0455,limite de consultas,,
+16,a_estrela_w2,4,False,,20000,9.3121,limite de consultas,,
+16,a_estrela_w4,4,False,,20000,6.6265,limite de consultas,,
+16,a_estrela_w8,4,False,,20000,4.4099,limite de consultas,,
+16,guloso_semantico,4,False,,50,0.009,limite de cliques,,
+16,guloso_grau,4,False,,50,0.0095,limite de cliques,,
+16,aleatorio,4,False,,50,0.0004,limite de cliques,,
+17,bfs_bidirecional,4,True,4.0,49,0.0007,,(31647)_1999_GY51 → Unidade_astronômica → Paris → Vale_do_Loire → Castelo_de_Loches,1.0
+17,a_estrela_w1,4,False,,20000,5.6842,limite de consultas,,
+17,a_estrela_w2,4,False,,20000,5.537,limite de consultas,,
+17,a_estrela_w4,4,True,4.0,7225,1.6991,,(31647)_1999_GY51 → Unidade_astronômica → Paris → Vale_do_Loire → Castelo_de_Loches,1.0
+17,a_estrela_w8,4,True,5.0,1080,0.227,,(31647)_1999_GY51 → Asteroide → Império_Russo → Palácio_de_Versalhes → Castelo_de_Chambord → Castelo_de_Loches,1.25
+17,guloso_semantico,4,False,,50,0.0099,limite de cliques,,
+17,guloso_grau,4,False,,50,0.0145,limite de cliques,,
+17,aleatorio,4,False,,49,0.001,limite de cliques,,
+18,bfs_bidirecional,5,True,5.0,83,0.0033,,NGC_7203 → Desvio_para_o_vermelho → Nicolau_Copérnico → Gdansk → Chojnice → Comuna_de_Konarzyny,1.0
+18,a_estrela_w1,5,False,,20000,7.2736,limite de consultas,,
+18,a_estrela_w2,5,False,,20000,6.3508,limite de consultas,,
+18,a_estrela_w4,5,False,,20000,6.8958,limite de consultas,,
+18,a_estrela_w8,5,False,,20000,8.4747,limite de consultas,,
+18,guloso_semantico,5,False,,50,0.0191,limite de cliques,,
+18,guloso_grau,5,False,,50,0.0517,limite de cliques,,
+18,aleatorio,5,False,,50,0.0024,limite de cliques,,
+19,bfs_bidirecional,6,True,6.0,20,0.0019,,"Sahasrara → Humano → Brasileiros → História_do_Brasil → Carlota_Joaquina_de_Bourbon → Percy_Smythe,_6.º_Visconde_Strangford → Visconde_Strangford",1.0
+19,a_estrela_w1,6,False,,20000,9.5274,limite de consultas,,
+19,a_estrela_w2,6,False,,20000,7.7136,limite de consultas,,
+19,a_estrela_w4,6,False,,20000,8.5423,limite de consultas,,
+19,a_estrela_w8,6,False,,20000,8.6931,limite de consultas,,
+19,guloso_semantico,6,False,,50,0.0209,limite de cliques,,
+19,guloso_grau,6,False,,50,0.0312,limite de cliques,,
+19,aleatorio,6,False,,50,0.001,limite de cliques,,
+20,bfs_bidirecional,4,True,4.0,27,0.0012,,Wohlen_bei_Bern → Lista_de_línguas → Brasil → SBT → Teenage_Mutant_Ninja_Turtles_(série_de_2012),1.0
+20,a_estrela_w1,4,False,,20000,8.5684,limite de consultas,,
+20,a_estrela_w2,4,False,,20000,8.3518,limite de consultas,,
+20,a_estrela_w4,4,True,4.0,3131,1.6658,,Wohlen_bei_Bern → Cantões_da_Suíça → 2005 → Nickelodeon → Teenage_Mutant_Ninja_Turtles_(série_de_2012),1.0
+20,a_estrela_w8,4,True,4.0,874,0.371,,Wohlen_bei_Bern → Cantões_da_Suíça → 2005 → Nickelodeon → Teenage_Mutant_Ninja_Turtles_(série_de_2012),1.0
+20,guloso_semantico,4,False,,50,0.0205,limite de cliques,,
+20,guloso_grau,4,False,,50,0.0444,limite de cliques,,
+20,aleatorio,4,False,,50,0.001,limite de cliques,,
+21,bfs_bidirecional,3,True,3.0,8,0.0005,,STS-42 → 2011 → Reese_Witherspoon → Austin_Film_Critics_Association,1.0
+21,a_estrela_w1,3,True,3.0,14609,9.1649,,STS-42 → 30_de_janeiro → Christian_Bale → Austin_Film_Critics_Association,1.0
+21,a_estrela_w2,3,True,3.0,14044,8.5748,,STS-42 → 30_de_janeiro → Christian_Bale → Austin_Film_Critics_Association,1.0
+21,a_estrela_w4,3,True,3.0,6328,3.9478,,STS-42 → 30_de_janeiro → Christian_Bale → Austin_Film_Critics_Association,1.0
+21,a_estrela_w8,3,True,3.0,8031,4.6178,,STS-42 → 30_de_janeiro → Christian_Bale → Austin_Film_Critics_Association,1.0
+21,guloso_semantico,3,False,,50,0.0435,limite de cliques,,
+21,guloso_grau,3,False,,50,0.0348,limite de cliques,,
+21,aleatorio,3,False,,50,0.0014,limite de cliques,,
+22,bfs_bidirecional,4,True,4.0,12,0.0009,,Oscypek → Polónia → Boxe → Lista_dos_campeões_mundiais_de_boxe_dos_super-médios → Robin_Reid,1.0
+22,a_estrela_w1,4,False,,20000,8.8619,limite de consultas,,
+22,a_estrela_w2,4,False,,20000,9.9505,limite de consultas,,
+22,a_estrela_w4,4,False,,20000,9.9032,limite de consultas,,
+22,a_estrela_w8,4,False,,20000,8.3552,limite de consultas,,
+22,guloso_semantico,4,False,,50,0.0361,limite de cliques,,
+22,guloso_grau,4,False,,50,0.03,limite de cliques,,
+22,aleatorio,4,False,,48,0.0009,limite de cliques,,
+23,bfs_bidirecional,3,True,3.0,3,0.0003,,"Município_de_Lawrence_(condado_de_Washington,_Ohio) → Estados_Unidos → Colônia_de_Plymouth → 1691",1.0
+23,a_estrela_w1,3,True,3.0,5481,3.8975,,"Município_de_Lawrence_(condado_de_Washington,_Ohio) → 2020 → 15_de_julho → 1691",1.0
+23,a_estrela_w2,3,True,3.0,5480,4.1119,,"Município_de_Lawrence_(condado_de_Washington,_Ohio) → 2020 → 15_de_julho → 1691",1.0
+23,a_estrela_w4,3,True,3.0,267,0.359,,"Município_de_Lawrence_(condado_de_Washington,_Ohio) → 2020 → 15_de_julho → 1691",1.0
+23,a_estrela_w8,3,True,3.0,57,0.0468,,"Município_de_Lawrence_(condado_de_Washington,_Ohio) → 2020 → 15_de_julho → 1691",1.0
+23,guloso_semantico,3,True,10.0,10,0.0045,,"Município_de_Lawrence_(condado_de_Washington,_Ohio) → Devola → Território → Pós-colonialismo → Década_de_1970 → 1977 → 1897 → 1830 → 1769 → 1693 → 1691",3.3333333333333335
+23,guloso_grau,3,False,,50,0.0404,limite de cliques,,
+23,aleatorio,3,False,,50,0.0017,limite de cliques,,
+24,bfs_bidirecional,5,True,5.0,32,0.0012,,(37502)_2257_T-2 → Laboratório_de_Propulsão_a_Jato → Espanha → Cantábria → Atletismo_nos_Jogos_Olímpicos_de_Verão_de_1984 → Keith_Connor,1.0
+24,a_estrela_w1,5,False,,20000,11.1428,limite de consultas,,
+24,a_estrela_w2,5,False,,20000,10.0687,limite de consultas,,
+24,a_estrela_w4,5,False,,20000,9.9387,limite de consultas,,
+24,a_estrela_w8,5,False,,20000,9.1616,limite de consultas,,
+24,guloso_semantico,5,False,,50,0.0271,limite de cliques,,
+24,guloso_grau,5,False,,50,0.0226,limite de cliques,,
+24,aleatorio,5,False,,50,0.001,limite de cliques,,
+25,bfs_bidirecional,3,True,3.0,3,0.0004,,Luz_(série) → Aramis_Trindade → 5_de_março → Sepp_Piontek,1.0
+25,a_estrela_w1,3,True,3.0,5877,4.1439,,Luz_(série) → Aramis_Trindade → 5_de_março → Sepp_Piontek,1.0
+25,a_estrela_w2,3,True,3.0,5871,4.0835,,Luz_(série) → Aramis_Trindade → 5_de_março → Sepp_Piontek,1.0
+25,a_estrela_w4,3,True,3.0,2304,1.5186,,Luz_(série) → Aramis_Trindade → 5_de_março → Sepp_Piontek,1.0
+25,a_estrela_w8,3,True,3.0,5519,2.5318,,Luz_(série) → Aramis_Trindade → 5_de_março → Sepp_Piontek,1.0
+25,guloso_semantico,3,False,,50,0.0103,limite de cliques,,
+25,guloso_grau,3,False,,50,0.0188,limite de cliques,,
+25,aleatorio,3,False,,50,0.0009,limite de cliques,,
+26,bfs_bidirecional,4,True,4.0,14,0.0011,,Estádio_David_Caldeira → 2004 → 20_de_agosto → Voo_Spanair_5022 → Voo_Philippine_Airlines_137,1.0
+26,a_estrela_w1,4,False,,20000,12.633,limite de consultas,,
+26,a_estrela_w2,4,False,,20000,10.472,limite de consultas,,
+26,a_estrela_w4,4,True,4.0,8067,5.855,,Estádio_David_Caldeira → 10_de_agosto → 11_de_dezembro → Voo_Thai_Airways_International_261 → Voo_Philippine_Airlines_137,1.0
+26,a_estrela_w8,4,True,4.0,3973,2.7527,,Estádio_David_Caldeira → 2004 → 20_de_agosto → Voo_Spanair_5022 → Voo_Philippine_Airlines_137,1.0
+26,guloso_semantico,4,False,,50,0.0162,limite de cliques,,
+26,guloso_grau,4,False,,50,0.0201,limite de cliques,,
+26,aleatorio,4,False,,49,0.0014,limite de cliques,,
+27,bfs_bidirecional,4,True,4.0,9,0.0006,,Ralph_Felton → 21_de_maio → 13_de_junho → Cascais → Étienne_de_Gröer,1.0
+27,a_estrela_w1,4,False,,20000,11.356,limite de consultas,,
+27,a_estrela_w2,4,False,,20000,8.3462,limite de consultas,,
+27,a_estrela_w4,4,False,,20000,9.0154,limite de consultas,,
+27,a_estrela_w8,4,False,,20000,8.557,limite de consultas,,
+27,guloso_semantico,4,False,,50,0.0251,limite de cliques,,
+27,guloso_grau,4,False,,50,0.02,limite de cliques,,
+27,aleatorio,4,False,,49,0.0009,limite de cliques,,
+28,bfs_bidirecional,5,True,5.0,21,0.001,,Dr._Sousinha → Manuel_Tavares_Rodrigues_de_Sousa → Universidade_do_Porto → Fernando_Henrique_Cardoso → Lista_de_eleições_presidenciais_no_Brasil → Jerônimo_de_Sousa_Monteiro,1.0
+28,a_estrela_w1,5,False,,20000,9.3521,limite de consultas,,
+28,a_estrela_w2,5,False,,20000,9.8024,limite de consultas,,
+28,a_estrela_w4,5,False,,20000,8.7111,limite de consultas,,
+28,a_estrela_w8,5,True,5.0,1453,0.957,,Dr._Sousinha → Manuel_Tavares_Rodrigues_de_Sousa → Universidade_do_Porto → Fernando_Henrique_Cardoso → Élcio_Álvares → Jerônimo_de_Sousa_Monteiro,1.0
+28,guloso_semantico,5,False,,50,0.0189,limite de cliques,,
+28,guloso_grau,5,False,,50,0.0221,limite de cliques,,
+28,aleatorio,5,False,,50,0.0025,limite de cliques,,
+29,bfs_bidirecional,5,True,5.0,51,0.0019,,Sankhya_Gestão → Minas_Gerais → América_Latina → Haiti → Violência_política → Gulfport_(Flórida),1.0
+29,a_estrela_w1,5,False,,20000,9.5604,limite de consultas,,
+29,a_estrela_w2,5,False,,20000,11.9647,limite de consultas,,
+29,a_estrela_w4,5,False,,20000,10.9763,limite de consultas,,
+29,a_estrela_w8,5,True,5.0,13725,7.3755,,Sankhya_Gestão → Inteligência_artificial → Pôquer → Mississippi → Gulfport → Gulfport_(Flórida),1.0
+29,guloso_semantico,5,False,,50,0.0487,limite de cliques,,
+29,guloso_grau,5,False,,50,0.0364,limite de cliques,,
+29,aleatorio,5,False,,50,0.0044,limite de cliques,,
+30,bfs_bidirecional,4,True,4.0,20,0.001,,Art_of_Jiu_Jitsu → Estados_Unidos → Janeiro → 1755 → 1755_em_Portugal,1.0
+30,a_estrela_w1,4,False,,20000,14.8168,limite de consultas,,
+30,a_estrela_w2,4,False,,20000,14.052,limite de consultas,,
+30,a_estrela_w4,4,True,4.0,5564,4.6714,,Art_of_Jiu_Jitsu → Jiu-jítsu_brasileiro → 1996 → 1996_em_Portugal → 1755_em_Portugal,1.0
+30,a_estrela_w8,4,True,4.0,318,0.3255,,Art_of_Jiu_Jitsu → Califórnia → Biblioteca_Nacional_do_Brasil → 1755 → 1755_em_Portugal,1.0
+30,guloso_semantico,4,False,,50,0.0391,limite de cliques,,
+30,guloso_grau,4,False,,50,0.026,limite de cliques,,
+30,aleatorio,4,False,,49,0.0011,limite de cliques,,
+31,bfs_bidirecional,7,True,7.0,34,0.003,,NGC_1758 → William_Herschel → 15_de_novembro → Alagoas → Maceió → Vergel_do_Lago → Instituto_Mandaver → Ecoempreendedorismo,1.0
+31,a_estrela_w1,7,False,,20000,8.5066,limite de consultas,,
+31,a_estrela_w2,7,False,,20000,9.3034,limite de consultas,,
+31,a_estrela_w4,7,False,,20000,8.1004,limite de consultas,,
+31,a_estrela_w8,7,False,,20000,10.627,limite de consultas,,
+31,guloso_semantico,7,False,,50,0.0232,limite de cliques,,
+31,guloso_grau,7,False,,50,0.0258,limite de cliques,,
+31,aleatorio,7,False,,50,0.0009,limite de cliques,,
+32,bfs_bidirecional,5,True,5.0,21,0.0011,,Throscodectes_xiphos → Austrália → Suécia → ABBA → Festival_Eurovisão_da_Canção_1987 → Didier_Comès,1.0
+32,a_estrela_w1,5,False,,20000,10.9049,limite de consultas,,
+32,a_estrela_w2,5,False,,20000,10.5398,limite de consultas,,
+32,a_estrela_w4,5,False,,20000,8.6319,limite de consultas,,
+32,a_estrela_w8,5,False,,20000,10.4023,limite de consultas,,
+32,guloso_semantico,5,False,,50,0.0263,limite de cliques,,
+32,guloso_grau,5,False,,50,0.0232,limite de cliques,,
+32,aleatorio,5,False,,49,0.001,limite de cliques,,
+33,bfs_bidirecional,5,True,5.0,55,0.003,,(34582)_2000_SH348 → Asteroide → Estados_Unidos → Major_League_Soccer → Thierry_Henry → Bradley_Locko,1.0
+33,a_estrela_w1,5,False,,20000,12.061,limite de consultas,,
+33,a_estrela_w2,5,False,,20000,12.0174,limite de consultas,,
+33,a_estrela_w4,5,False,,20000,10.3868,limite de consultas,,
+33,a_estrela_w8,5,True,5.0,14165,7.5296,,(34582)_2000_SH348 → Lista_de_asteroides → 1937 → 12_de_dezembro → Michael_Olise → Bradley_Locko,1.0
+33,guloso_semantico,5,False,,50,0.0348,limite de cliques,,
+33,guloso_grau,5,False,,50,0.018,limite de cliques,,
+33,aleatorio,5,False,,50,0.0009,limite de cliques,,
+34,bfs_bidirecional,4,True,4.0,21,0.0015,,Léo_Figueiró → Rio_de_Janeiro → Milão → San_Zenone_al_Lambro → San_Zenone,1.0
+34,a_estrela_w1,4,False,,20000,10.4023,limite de consultas,,
+34,a_estrela_w2,4,False,,20000,10.9543,limite de consultas,,
+34,a_estrela_w4,4,True,4.0,15379,8.4979,,Léo_Figueiró → Rio_de_Janeiro → Milão → San_Zenone_al_Lambro → San_Zenone,1.0
+34,a_estrela_w8,4,True,4.0,514,0.4085,,Léo_Figueiró → Rio_de_Janeiro → Milão → San_Zenone_al_Lambro → San_Zenone,1.0
+34,guloso_semantico,4,False,,50,0.0183,limite de cliques,,
+34,guloso_grau,4,False,,50,0.0198,limite de cliques,,
+34,aleatorio,4,False,,47,0.0009,limite de cliques,,
+35,bfs_bidirecional,4,True,4.0,16,0.003,,Astra_5°E → Europa → 17_de_fevereiro → 5_de_junho → François_Sagat,1.0
+35,a_estrela_w1,4,False,,20000,9.4893,limite de consultas,,
+35,a_estrela_w2,4,False,,20000,9.5114,limite de consultas,,
+35,a_estrela_w4,4,False,,20000,9.6237,limite de consultas,,
+35,a_estrela_w8,4,False,,20000,9.3351,limite de consultas,,
+35,guloso_semantico,4,False,,50,0.0119,limite de cliques,,
+35,guloso_grau,4,False,,50,0.0188,limite de cliques,,
+35,aleatorio,4,False,,49,0.0022,limite de cliques,,
+36,bfs_bidirecional,4,True,4.0,7,0.0002,,Karl_Schäfer → Áustria → Igreja_Católica_na_Áustria → Diocese_de_Innsbruck → Hermann_Glettler,1.0
+36,a_estrela_w1,4,False,,20000,10.2117,limite de consultas,,
+36,a_estrela_w2,4,False,,20000,10.0698,limite de consultas,,
+36,a_estrela_w4,4,False,,20000,10.2384,limite de consultas,,
+36,a_estrela_w8,4,False,,20000,8.8148,limite de consultas,,
+36,guloso_semantico,4,False,,50,0.0267,limite de cliques,,
+36,guloso_grau,4,False,,50,0.0206,limite de cliques,,
+36,aleatorio,4,False,,46,0.001,limite de cliques,,
+37,bfs_bidirecional,5,True,5.0,180,0.0032,,Conus_papilliferus → Animalia → China → Jogos_Olímpicos → Jogos_Paralímpicos_de_Verão_de_2008 → Eslováquia_nos_Jogos_Paralímpicos_de_Verão_de_2008,1.0
+37,a_estrela_w1,5,False,,20000,10.3743,limite de consultas,,
+37,a_estrela_w2,5,False,,20000,11.2123,limite de consultas,,
+37,a_estrela_w4,5,False,,20000,11.3136,limite de consultas,,
+37,a_estrela_w8,5,True,5.0,478,0.3223,,Conus_papilliferus → Taxonomia → Suécia → Jogos_Olímpicos_de_Verão → Jogos_Paralímpicos_de_Verão_de_2008 → Eslováquia_nos_Jogos_Paralímpicos_de_Verão_de_2008,1.0
+37,guloso_semantico,5,False,,50,0.0203,limite de cliques,,
+37,guloso_grau,5,False,,50,0.0422,limite de cliques,,
+37,aleatorio,5,False,,50,0.0022,limite de cliques,,
+38,bfs_bidirecional,6,True,6.0,266,0.0111,,Terebra_vicdani → Animalia → Agricultura → Peru → Amazonas_(Peru) → Huanta_(província) → Luricocha_(distrito),1.0
+38,a_estrela_w1,6,False,,20000,9.1896,limite de consultas,,
+38,a_estrela_w2,6,False,,20000,8.5229,limite de consultas,,
+38,a_estrela_w4,6,False,,20000,9.1714,limite de consultas,,
+38,a_estrela_w8,6,False,,20000,8.6998,limite de consultas,,
+38,guloso_semantico,6,False,,50,0.0365,limite de cliques,,
+38,guloso_grau,6,False,,50,0.041,limite de cliques,,
+38,aleatorio,6,False,,50,0.0068,limite de cliques,,
+39,bfs_bidirecional,4,True,4.0,14,0.0008,,Avesnes-en-Val → França → Bélgica → Ruanda → Brasão_de_armas_de_Ruanda,1.0
+39,a_estrela_w1,4,False,,20000,10.1993,limite de consultas,,
+39,a_estrela_w2,4,False,,20000,14.2055,limite de consultas,,
+39,a_estrela_w4,4,True,4.0,2883,2.1654,,Avesnes-en-Val → França → África_subsariana → Ruanda → Brasão_de_armas_de_Ruanda,1.0
+39,a_estrela_w8,4,True,4.0,24,0.018,,Avesnes-en-Val → França → África_subsariana → Ruanda → Brasão_de_armas_de_Ruanda,1.0
+39,guloso_semantico,4,True,6.0,6,0.0022,,Avesnes-en-Val → Território → Descolonialidade → África → Missões_diplomáticas_de_Ruanda → Ruanda → Brasão_de_armas_de_Ruanda,1.5
+39,guloso_grau,4,False,,50,0.0191,limite de cliques,,
+39,aleatorio,4,False,,50,0.0009,limite de cliques,,
+40,bfs_bidirecional,4,True,4.0,28,0.001,,Acmim → Egito → Associazione_Calcio_Milan → PSV_Eindhoven → Supercopa_dos_Países_Baixos_de_2012,1.0
+40,a_estrela_w1,4,False,,20000,15.0433,limite de consultas,,
+40,a_estrela_w2,4,False,,20000,11.8514,limite de consultas,,
+40,a_estrela_w4,4,True,4.0,4277,2.9673,,Acmim → Egito → Associazione_Calcio_Milan → PSV_Eindhoven → Supercopa_dos_Países_Baixos_de_2012,1.0
+40,a_estrela_w8,4,True,4.0,2480,1.5146,,Acmim → Egito → Associazione_Calcio_Milan → PSV_Eindhoven → Supercopa_dos_Países_Baixos_de_2012,1.0
+40,guloso_semantico,4,False,,50,0.0323,limite de cliques,,
+40,guloso_grau,4,False,,50,0.0358,limite de cliques,,
+40,aleatorio,4,False,,49,0.0011,limite de cliques,,
+41,bfs_bidirecional,4,True,4.0,29,0.0024,,Cainucaítas → Língua_árabe → Diglossia → Mogadouro → EN221,1.0
+41,a_estrela_w1,4,False,,20000,8.6665,limite de consultas,,
+41,a_estrela_w2,4,False,,20000,9.3514,limite de consultas,,
+41,a_estrela_w4,4,True,4.0,15723,6.8324,,Cainucaítas → Diocese_do_Oriente → Diocese → Guarda → EN221,1.0
+41,a_estrela_w8,4,True,5.0,3211,1.4418,,Cainucaítas → Língua_árabe → Diglossia → Vimioso → EN218 → EN221,1.25
+41,guloso_semantico,4,False,,50,0.0114,limite de cliques,,
+41,guloso_grau,4,False,,50,0.0239,limite de cliques,,
+41,aleatorio,4,False,,49,0.0018,limite de cliques,,
+42,bfs_bidirecional,5,True,5.0,52,0.0028,,Beta_Centauro_(foguete) → Foguete_espacial → Europa → Tirana → Balshi → Greshicë,1.0
+42,a_estrela_w1,5,False,,20000,10.6349,limite de consultas,,
+42,a_estrela_w2,5,False,,20000,10.1349,limite de consultas,,
+42,a_estrela_w4,5,False,,20000,10.1659,limite de consultas,,
+42,a_estrela_w8,5,False,,20000,8.3138,limite de consultas,,
+42,guloso_semantico,5,False,,50,0.0122,limite de cliques,,
+42,guloso_grau,5,False,,50,0.0198,limite de cliques,,
+42,aleatorio,5,False,,49,0.0011,limite de cliques,,
+43,bfs_bidirecional,4,True,4.0,68,0.0023,,Museu_Integrado_de_Roraima → 13_de_fevereiro → 2012 → Jogos_Olímpicos_de_Inverno_da_Juventude_de_2012 → Estônia_nos_Jogos_Olímpicos_de_Inverno_da_Juventude_de_2012,1.0
+43,a_estrela_w1,4,False,,20000,10.5343,limite de consultas,,
+43,a_estrela_w2,4,False,,20000,11.3159,limite de consultas,,
+43,a_estrela_w4,4,True,4.0,10224,6.7808,,Museu_Integrado_de_Roraima → Brasil → Jogos_Olímpicos_de_Verão_de_2016 → Jogos_Olímpicos_de_Inverno_da_Juventude_de_2012 → Estônia_nos_Jogos_Olímpicos_de_Inverno_da_Juventude_de_2012,1.0
+43,a_estrela_w8,4,True,4.0,25,0.0557,,Museu_Integrado_de_Roraima → 1984 → Jogos_Olímpicos_de_Verão_de_1984 → Jogos_Olímpicos_de_Inverno_da_Juventude_de_2012 → Estônia_nos_Jogos_Olímpicos_de_Inverno_da_Juventude_de_2012,1.0
+43,guloso_semantico,4,False,,50,0.02,limite de cliques,,
+43,guloso_grau,4,False,,50,0.0345,limite de cliques,,
+43,aleatorio,4,False,,50,0.0009,limite de cliques,,
+44,bfs_bidirecional,4,True,4.0,18,0.0036,,Carlota_de_Gales_(2015) → Reino_Unido → Alan_Moore → Lista_de_personagens_da_DC_Comics → Anel_Energético,1.0
+44,a_estrela_w1,4,False,,20000,9.4183,limite de consultas,,
+44,a_estrela_w2,4,False,,20000,9.1617,limite de consultas,,
+44,a_estrela_w4,4,False,,20000,9.6756,limite de consultas,,
+44,a_estrela_w8,4,False,,20000,8.8305,limite de consultas,,
+44,guloso_semantico,4,False,,50,0.0168,limite de cliques,,
+44,guloso_grau,4,False,,50,0.0196,limite de cliques,,
+44,aleatorio,4,False,,49,0.0009,limite de cliques,,
+45,bfs_bidirecional,4,True,4.0,27,0.002,,NGC_4438 → 8_de_abril → 11_de_dezembro → Rey_Mysterio → Evil_(lutador),1.0
+45,a_estrela_w1,4,False,,20000,5.7866,limite de consultas,,
+45,a_estrela_w2,4,False,,20000,5.2564,limite de consultas,,
+45,a_estrela_w4,4,True,4.0,12355,3.6976,,NGC_4438 → 8_de_abril → 10_de_outubro → Ilja_Dragunov → Evil_(lutador),1.0
+45,a_estrela_w8,4,True,4.0,3456,1.6697,,NGC_4438 → 8_de_abril → 10_de_outubro → Ilja_Dragunov → Evil_(lutador),1.0
+45,guloso_semantico,4,False,,50,0.0157,limite de cliques,,
+45,guloso_grau,4,False,,50,0.0227,limite de cliques,,
+45,aleatorio,4,False,,50,0.0009,limite de cliques,,
+46,bfs_bidirecional,6,True,6.0,338,0.0071,,People_Like_Us_(álbum) → Califórnia → México → Orquídea → Lista_de_gêneros_de_Orchidaceae → Acianthera → Acianthera_hirsutula,1.0
+46,a_estrela_w1,6,False,,20000,8.0369,limite de consultas,,
+46,a_estrela_w2,6,False,,20000,7.6845,limite de consultas,,
+46,a_estrela_w4,6,False,,20000,6.9747,limite de consultas,,
+46,a_estrela_w8,6,False,,20000,7.0879,limite de consultas,,
+46,guloso_semantico,6,False,,50,0.0111,limite de cliques,,
+46,guloso_grau,6,False,,50,0.0295,limite de cliques,,
+46,aleatorio,6,False,,47,0.001,limite de cliques,,
+47,bfs_bidirecional,4,True,4.0,36,0.0042,,Lozza → Itália → Copa_do_Mundo_FIFA_de_2006 → Niclas_Alexandersson → Västra_Frölunda_Idrottsförening,1.0
+47,a_estrela_w1,4,False,,20000,8.119,limite de consultas,,
+47,a_estrela_w2,4,False,,20000,7.8201,limite de consultas,,
+47,a_estrela_w4,4,False,,20000,7.4107,limite de consultas,,
+47,a_estrela_w8,4,True,5.0,11854,5.4828,,Lozza → 2011 → 25_de_abril → Pa_Konate → Jönköpings_Södra_Idrottsförening → Västra_Frölunda_Idrottsförening,1.25
+47,guloso_semantico,4,False,,50,0.0159,limite de cliques,,
+47,guloso_grau,4,False,,50,0.0176,limite de cliques,,
+47,aleatorio,4,False,,48,0.001,limite de cliques,,
+48,bfs_bidirecional,4,True,4.0,40,0.0031,,War_of_the_Buttons → Reino_Unido → Harry_Gregson-Williams → Twelve_(filme) → 50_Cent:_Blood_on_the_Sand,1.0
+48,a_estrela_w1,4,False,,20000,9.4429,limite de consultas,,
+48,a_estrela_w2,4,False,,20000,9.9784,limite de consultas,,
+48,a_estrela_w4,4,True,4.0,8027,6.3234,,War_of_the_Buttons → Filme → Val_Kilmer → Streets_of_Blood → 50_Cent:_Blood_on_the_Sand,1.0
+48,a_estrela_w8,4,True,4.0,1237,0.9016,,War_of_the_Buttons → Filme → Val_Kilmer → Streets_of_Blood → 50_Cent:_Blood_on_the_Sand,1.0
+48,guloso_semantico,4,False,,50,0.0144,limite de cliques,,
+48,guloso_grau,4,False,,50,0.0209,limite de cliques,,
+48,aleatorio,4,False,,50,0.001,limite de cliques,,
+49,bfs_bidirecional,4,True,4.0,38,0.0018,,Atentados_de_Carcassonne_e_Trèbes → França → Argentina → Oscar_de_melhor_banda_sonora → A_Valsa_do_Imperador,1.0
+49,a_estrela_w1,4,False,,20000,10.2396,limite de consultas,,
+49,a_estrela_w2,4,False,,20000,9.4484,limite de consultas,,
+49,a_estrela_w4,4,False,,20000,8.389,limite de consultas,,
+49,a_estrela_w8,4,False,,20000,8.7405,limite de consultas,,
+49,guloso_semantico,4,False,,50,0.0257,limite de cliques,,
+49,guloso_grau,4,False,,50,0.0199,limite de cliques,,
+49,aleatorio,4,False,,50,0.0009,limite de cliques,,
+50,bfs_bidirecional,4,True,4.0,26,0.001,,Khust → OpenStreetMap → Belo_Horizonte → 12_de_dezembro → Grover_Washington_Jr.,1.0
+50,a_estrela_w1,4,False,,20000,8.884,limite de consultas,,
+50,a_estrela_w2,4,False,,20000,8.6735,limite de consultas,,
+50,a_estrela_w4,4,False,,20000,8.318,limite de consultas,,
+50,a_estrela_w8,4,True,4.0,19603,9.0243,,Khust → Cidade → Wikcionário → 12_de_dezembro → Grover_Washington_Jr.,1.0
+50,guloso_semantico,4,False,,50,0.0403,limite de cliques,,
+50,guloso_grau,4,False,,50,0.0435,limite de cliques,,
+50,aleatorio,4,False,,49,0.0029,limite de cliques,,
+51,bfs_bidirecional,4,True,4.0,59,0.0018,,Papa_Agatão → Roma → Argélia → Tiarete_(província) → Tousnina,1.0
+51,a_estrela_w1,4,False,,20000,9.9121,limite de consultas,,
+51,a_estrela_w2,4,False,,20000,8.5783,limite de consultas,,
+51,a_estrela_w4,4,False,,20000,9.5491,limite de consultas,,
+51,a_estrela_w8,4,True,4.0,6594,2.584,,Papa_Agatão → Roma → Argel → Tiarete → Tousnina,1.0
+51,guloso_semantico,4,False,,50,0.0163,limite de cliques,,
+51,guloso_grau,4,False,,50,0.0194,limite de cliques,,
+51,aleatorio,4,False,,50,0.0009,limite de cliques,,
+52,bfs_bidirecional,4,True,4.0,15,0.0027,,Emil_Jay_Freireich → 1_de_fevereiro → 27_de_março → Atena → Atena_Promacos,1.0
+52,a_estrela_w1,4,False,,20000,9.8272,limite de consultas,,
+52,a_estrela_w2,4,False,,20000,8.1307,limite de consultas,,
+52,a_estrela_w4,4,True,4.0,16899,8.8391,,Emil_Jay_Freireich → 16_de_março → Dioniso → Atena → Atena_Promacos,1.0
+52,a_estrela_w8,4,True,4.0,91,0.0473,,Emil_Jay_Freireich → 16_de_março → Dioniso → Atena → Atena_Promacos,1.0
+52,guloso_semantico,4,False,,50,0.0187,limite de cliques,,
+52,guloso_grau,4,False,,50,0.0205,limite de cliques,,
+52,aleatorio,4,False,,49,0.0008,limite de cliques,,
+53,bfs_bidirecional,6,True,6.0,242,0.0026,,Germain_Mendome → Gabão → Costa_do_Marfim → Formiga → Formigas_de_correição → Leptogenys → Leptogenys_stuhlmanni,1.0
+53,a_estrela_w1,6,False,,20000,8.9347,limite de consultas,,
+53,a_estrela_w2,6,False,,20000,8.0894,limite de consultas,,
+53,a_estrela_w4,6,False,,20000,8.4764,limite de consultas,,
+53,a_estrela_w8,6,False,,20000,7.9169,limite de consultas,,
+53,guloso_semantico,6,False,,50,0.0191,limite de cliques,,
+53,guloso_grau,6,False,,50,0.0284,limite de cliques,,
+53,aleatorio,6,False,,50,0.0009,limite de cliques,,
+54,bfs_bidirecional,4,True,4.0,19,0.0009,,Veenendaal → 1_de_janeiro → 13_de_junho → Vila_Verde → Valdreu,1.0
+54,a_estrela_w1,4,False,,20000,8.881,limite de consultas,,
+54,a_estrela_w2,4,False,,20000,8.5275,limite de consultas,,
+54,a_estrela_w4,4,False,,20000,8.7919,limite de consultas,,
+54,a_estrela_w8,4,True,4.0,14330,6.3774,,Veenendaal → 1_de_janeiro → 2003 → Pico_de_Regalados → Valdreu,1.0
+54,guloso_semantico,4,False,,50,0.0194,limite de cliques,,
+54,guloso_grau,4,True,22.0,22,0.0143,,Veenendaal → 1_de_janeiro → Lista_de_municípios_do_Brasil_por_PIB → Lista_de_municípios_do_Brasil_por_PIB_(2016) → Lista_de_municípios_do_Brasil_por_PIB_(2015) → Lista_de_municípios_do_Brasil_por_PIB_per_capita → Lista_de_municípios_do_Brasil → Lista_de_municípios_do_Brasil_por_população_(2015) → Lista_de_municípios_do_Brasil_por_população_(2010) → Lista_de_municípios_do_Brasil_por_população_(2013) → Lista_de_municípios_brasileiros_por_área_decrescente → Lista_de_municípios_do_Brasil_por_população_(2022) → Lista_de_municípios_do_Brasil_por_população_(2008) → Lista_de_municípios_do_Brasil_por_unidade_federativa → São_Paulo → Óscar → Brasil → Belo_Horizonte → Rio_de_Janeiro → Roma → Portugal → Lista_de_freguesias_de_Portugal → Valdreu,5.5
+54,aleatorio,4,False,,50,0.001,limite de cliques,,
+55,bfs_bidirecional,4,True,4.0,37,0.0076,,Mar_de_Banda → Oceano_Pacífico → Marinha_dos_Estados_Unidos → 2019 → Acidente_aéreo_do_C-130_Hercules_no_Chile_em_2019,1.0
+55,a_estrela_w1,4,False,,20000,9.4342,limite de consultas,,
+55,a_estrela_w2,4,False,,20000,8.2551,limite de consultas,,
+55,a_estrela_w4,4,True,4.0,6426,2.8462,,Mar_de_Banda → Golfo_Pérsico → Voo_Iran_Air_655 → Colisão_aérea_no_Alasca_em_2019 → Acidente_aéreo_do_C-130_Hercules_no_Chile_em_2019,1.0
+55,a_estrela_w8,4,True,4.0,1624,0.8221,,Mar_de_Banda → Golfo_Pérsico → Voo_Iran_Air_655 → Colisão_aérea_no_Alasca_em_2019 → Acidente_aéreo_do_C-130_Hercules_no_Chile_em_2019,1.0
+55,guloso_semantico,4,False,,50,0.087,limite de cliques,,
+55,guloso_grau,4,False,,50,0.0369,limite de cliques,,
+55,aleatorio,4,False,,50,0.0032,limite de cliques,,
+56,bfs_bidirecional,6,True,6.0,41,0.0015,,Equação_de_Kapustinskii → Fosfato → Plantae → Chlorophyta → Bryopsidales → Udoteaceae → Rhipidosiphon,1.0
+56,a_estrela_w1,6,False,,20000,9.7352,limite de consultas,,
+56,a_estrela_w2,6,False,,20000,10.1758,limite de consultas,,
+56,a_estrela_w4,6,False,,20000,10.5284,limite de consultas,,
+56,a_estrela_w8,6,False,,20000,6.9757,limite de consultas,,
+56,guloso_semantico,6,False,,50,0.0118,limite de cliques,,
+56,guloso_grau,6,False,,50,0.0189,limite de cliques,,
+56,aleatorio,6,False,,49,0.001,limite de cliques,,
+57,bfs_bidirecional,3,True,3.0,5,0.0005,,Katsura_Utamaru → 2_de_julho → 4_de_setembro → Francisco_Carlos_Martins_Vidal,1.0
+57,a_estrela_w1,3,True,3.0,4976,3.6596,,Katsura_Utamaru → 14_de_agosto → 4_de_setembro → Francisco_Carlos_Martins_Vidal,1.0
+57,a_estrela_w2,3,True,3.0,4854,3.8551,,Katsura_Utamaru → 14_de_agosto → 4_de_setembro → Francisco_Carlos_Martins_Vidal,1.0
+57,a_estrela_w4,3,True,3.0,435,0.3831,,Katsura_Utamaru → 14_de_agosto → 4_de_setembro → Francisco_Carlos_Martins_Vidal,1.0
+57,a_estrela_w8,3,True,4.0,478,0.3113,,"Katsura_Utamaru → 2_de_julho → Mirandinha_(futebolista,_1959) → Luís_Carlos_Winck → Francisco_Carlos_Martins_Vidal",1.3333333333333333
+57,guloso_semantico,3,False,,50,0.0291,limite de cliques,,
+57,guloso_grau,3,False,,50,0.0221,limite de cliques,,
+57,aleatorio,3,False,,50,0.001,limite de cliques,,
+58,bfs_bidirecional,4,True,4.0,12,0.001,,Akher_Wahed_Fina → Oscar_de_melhor_filme_internacional → François_Truffaut → 1932 → 1932_no_Brasil,1.0
+58,a_estrela_w1,4,False,,20000,9.5774,limite de consultas,,
+58,a_estrela_w2,4,False,,20000,10.3886,limite de consultas,,
+58,a_estrela_w4,4,True,4.0,4414,2.9487,,Akher_Wahed_Fina → Oscar_de_melhor_filme_internacional → 1929 → 1929_no_Brasil → 1932_no_Brasil,1.0
+58,a_estrela_w8,4,True,4.0,93,0.0885,,Akher_Wahed_Fina → Oscar_de_melhor_filme_internacional → 1929 → 1929_no_Brasil → 1932_no_Brasil,1.0
+58,guloso_semantico,4,True,15.0,15,0.0154,,Akher_Wahed_Fina → Roteirista → Português_brasileiro → Brasil_Colônia → História_do_Brasil → História_do_Brasil_(desambiguação) → História_do_Brasil_(João_Ribeiro) → Brasil → Golpe_de_Estado_no_Brasil_em_1937 → Golpe_de_Estado_no_Brasil_em_1964 → Referendo_no_Brasil_em_1963 → Plebiscito_no_Brasil_em_1993 → Império_do_Brasil → Escravidão_no_Brasil → 1888_no_Brasil → 1932_no_Brasil,3.75
+58,guloso_grau,4,False,,50,0.0188,limite de cliques,,
+58,aleatorio,4,False,,49,0.0011,limite de cliques,,
+59,bfs_bidirecional,4,True,4.0,33,0.0037,,Herten → 2007 → 12_de_maio → Carlos_Secretário → Futebol_Clube_Cesarense,1.0
+59,a_estrela_w1,4,False,,20000,9.8254,limite de consultas,,
+59,a_estrela_w2,4,False,,20000,9.2835,limite de consultas,,
+59,a_estrela_w4,4,True,4.0,17066,7.836,,Herten → 2007 → 12_de_maio → Carlos_Secretário → Futebol_Clube_Cesarense,1.0
+59,a_estrela_w8,4,True,5.0,13059,6.153,,Herten → Prefeito → Portugal → Vitória_Sport_Clube → Associação_de_Futebol_de_Aveiro → Futebol_Clube_Cesarense,1.25
+59,guloso_semantico,4,False,,50,0.0194,limite de cliques,,
+59,guloso_grau,4,False,,50,0.024,limite de cliques,,
+59,aleatorio,4,False,,50,0.001,limite de cliques,,
+60,bfs_bidirecional,4,True,4.0,26,0.0021,,Lonicera_pileata → Classificação_científica → Década_de_1960 → Jane_Fonda → Fang_Fang,1.0
+60,a_estrela_w1,4,False,,20000,7.417,limite de consultas,,
+60,a_estrela_w2,4,False,,20000,6.5478,limite de consultas,,
+60,a_estrela_w4,4,False,,20000,6.4308,limite de consultas,,
+60,a_estrela_w8,4,False,,20000,6.2775,limite de consultas,,
+60,guloso_semantico,4,False,,50,0.0175,limite de cliques,,
+60,guloso_grau,4,False,,50,0.0225,limite de cliques,,
+60,aleatorio,4,False,,48,0.0009,limite de cliques,,
+61,bfs_bidirecional,4,True,4.0,4,0.0008,,Frumêncio → Cristianismo → Nicolau_Copérnico → 19_de_fevereiro → Elyh_Harrison,1.0
+61,a_estrela_w1,4,False,,20000,8.7203,limite de consultas,,
+61,a_estrela_w2,4,False,,20000,8.4259,limite de consultas,,
+61,a_estrela_w4,4,False,,20000,9.0892,limite de consultas,,
+61,a_estrela_w8,4,False,,20000,9.2755,limite de consultas,,
+61,guloso_semantico,4,False,,50,0.0157,limite de cliques,,
+61,guloso_grau,4,False,,50,0.0183,limite de cliques,,
+61,aleatorio,4,False,,50,0.0009,limite de cliques,,
+62,bfs_bidirecional,5,True,5.0,109,0.0033,,"He_Reigns:_The_Worship_Collection → 4_de_outubro → 31_de_julho → Filipe_Wolfgang,_Conde_de_Hanau-Lichtenberg → Lichtenau → Wörnitz",1.0
+62,a_estrela_w1,5,False,,20000,8.4297,limite de consultas,,
+62,a_estrela_w2,5,False,,20000,8.3473,limite de consultas,,
+62,a_estrela_w4,5,False,,20000,8.087,limite de consultas,,
+62,a_estrela_w8,5,False,,20000,8.6367,limite de consultas,,
+62,guloso_semantico,5,False,,50,0.0125,limite de cliques,,
+62,guloso_grau,5,False,,50,0.0195,limite de cliques,,
+62,aleatorio,5,False,,50,0.0009,limite de cliques,,
+63,bfs_bidirecional,4,True,4.0,8,0.0016,,"E_la_nave_va → Itália → Organização_das_Nações_Unidas_para_a_Educação,_a_Ciência_e_a_Cultura → Lista_do_Patrimônio_Mundial_no_Panamá → Pteroglossus_torquatus",1.0
+63,a_estrela_w1,4,False,,20000,9.9687,limite de consultas,,
+63,a_estrela_w2,4,False,,20000,9.1416,limite de consultas,,
+63,a_estrela_w4,4,False,,20000,6.8443,limite de consultas,,
+63,a_estrela_w8,4,False,,20000,6.1849,limite de consultas,,
+63,guloso_semantico,4,False,,50,0.0281,limite de cliques,,
+63,guloso_grau,4,False,,50,0.0314,limite de cliques,,
+63,aleatorio,4,False,,50,0.0013,limite de cliques,,
+64,bfs_bidirecional,4,True,4.0,6,0.0004,,Copa_Cataratas_de_Futsal → Brasil → Terra → Procarionte → Microcompartimento_bacteriano,1.0
+64,a_estrela_w1,4,False,,20000,9.4255,limite de consultas,,
+64,a_estrela_w2,4,False,,20000,8.7317,limite de consultas,,
+64,a_estrela_w4,4,True,4.0,8372,5.5797,,Copa_Cataratas_de_Futsal → Brasil → Ecossistema → Procarionte → Microcompartimento_bacteriano,1.0
+64,a_estrela_w8,4,True,4.0,4751,2.7583,,Copa_Cataratas_de_Futsal → Brasil → Ecossistema → Procarionte → Microcompartimento_bacteriano,1.0
+64,guloso_semantico,4,False,,50,0.0131,limite de cliques,,
+64,guloso_grau,4,False,,50,0.0193,limite de cliques,,
+64,aleatorio,4,False,,50,0.0011,limite de cliques,,
+65,bfs_bidirecional,4,True,4.0,10,0.0008,,Siraquelé → Mali → Cristianismo → Cisma → Devadatta,1.0
+65,a_estrela_w1,4,False,,20000,8.2398,limite de consultas,,
+65,a_estrela_w2,4,False,,20000,7.8321,limite de consultas,,
+65,a_estrela_w4,4,True,4.0,6841,2.6027,,Siraquelé → Mali → Maomé → Cisma → Devadatta,1.0
+65,a_estrela_w8,4,True,4.0,1844,0.8488,,Siraquelé → Mali → Maomé → Cisma → Devadatta,1.0
+65,guloso_semantico,4,False,,50,0.0137,limite de cliques,,
+65,guloso_grau,4,False,,50,0.0201,limite de cliques,,
+65,aleatorio,4,False,,50,0.0009,limite de cliques,,
+66,bfs_bidirecional,4,True,4.0,30,0.0033,,Mormopterus_eleryi → Austrália → Brasil → Partido_Social_Liberal → Partido_da_Nova_República,1.0
+66,a_estrela_w1,4,False,,20000,9.0613,limite de consultas,,
+66,a_estrela_w2,4,False,,20000,8.2189,limite de consultas,,
+66,a_estrela_w4,4,True,4.0,4184,2.1463,,Mormopterus_eleryi → Austrália → República → República_Nova → Partido_da_Nova_República,1.0
+66,a_estrela_w8,4,True,4.0,52,0.0347,,Mormopterus_eleryi → Austrália → República → República_Nova → Partido_da_Nova_República,1.0
+66,guloso_semantico,4,True,11.0,11,0.0066,,Mormopterus_eleryi → Filo → Nematoda → Trichobilharzia_regenti → Homem → Arquivos_Nacionais_e_Administração_de_Documentos → Governo_dos_Estados_Unidos → República_democrática → República → Nova_República → República_Nova → Partido_da_Nova_República,2.75
+66,guloso_grau,4,False,,50,0.0199,limite de cliques,,
+66,aleatorio,4,False,,50,0.001,limite de cliques,,
+67,bfs_bidirecional,5,True,5.0,12,0.0007,,Eugene_Goostman → Rússia → Aves → Mutualismo_(biologia) → Tetraponera → Tetraponera_sahlbergii,1.0
+67,a_estrela_w1,5,False,,20000,7.8005,limite de consultas,,
+67,a_estrela_w2,5,False,,20000,9.4594,limite de consultas,,
+67,a_estrela_w4,5,False,,20000,8.5423,limite de consultas,,
+67,a_estrela_w8,5,False,,20000,8.4556,limite de consultas,,
+67,guloso_semantico,5,False,,50,0.0096,limite de cliques,,
+67,guloso_grau,5,False,,50,0.0174,limite de cliques,,
+67,aleatorio,5,False,,49,0.0011,limite de cliques,,
+68,bfs_bidirecional,5,True,5.0,100,0.0472,,Barragem_Eurico_Gaspar_Dutra → Brasil → Alemanha → David_Hilbert → Arthur_Moritz_Schoenflies → Otto_Mügge,1.0
+68,a_estrela_w1,5,False,,20000,9.7359,limite de consultas,,
+68,a_estrela_w2,5,False,,20000,9.509,limite de consultas,,
+68,a_estrela_w4,5,False,,20000,9.3991,limite de consultas,,
+68,a_estrela_w8,5,False,,20000,9.126,limite de consultas,,
+68,guloso_semantico,5,False,,49,0.0176,limite de cliques,,
+68,guloso_grau,5,False,,50,0.02,limite de cliques,,
+68,aleatorio,5,False,,48,0.0012,limite de cliques,,
+69,bfs_bidirecional,4,True,4.0,35,0.0014,,World_Business_Council_for_Sustainable_Development → Suíça → Andorra → Ginástica → Campeonato_Europeu_de_Ginástica_Artística_de_2025,1.0
+69,a_estrela_w1,4,False,,20000,10.3186,limite de consultas,,
+69,a_estrela_w2,4,False,,20000,10.0387,limite de consultas,,
+69,a_estrela_w4,4,True,4.0,5044,3.7567,,World_Business_Council_for_Sustainable_Development → Suíça → Federação_Internacional_de_Voleibol → Federação_Internacional_de_Ginástica → Campeonato_Europeu_de_Ginástica_Artística_de_2025,1.0
+69,a_estrela_w8,4,True,4.0,132,0.0748,,World_Business_Council_for_Sustainable_Development → Suíça → Federação_Internacional_de_Voleibol → Federação_Internacional_de_Ginástica → Campeonato_Europeu_de_Ginástica_Artística_de_2025,1.0
+69,guloso_semantico,4,False,,50,0.0248,limite de cliques,,
+69,guloso_grau,4,False,,50,0.0296,limite de cliques,,
+69,aleatorio,4,False,,50,0.001,limite de cliques,,
+70,bfs_bidirecional,3,True,3.0,4,0.0011,,Zona_Sul_de_Porto_Alegre → Álvaro_Siza_Vieira → Isaac_Stern → Bailarino,1.0
+70,a_estrela_w1,3,True,3.0,7705,5.0028,,Zona_Sul_de_Porto_Alegre → Pedra_Redonda_(Porto_Alegre) → Balé → Bailarino,1.0
+70,a_estrela_w2,3,True,3.0,7705,5.9322,,Zona_Sul_de_Porto_Alegre → Pedra_Redonda_(Porto_Alegre) → Balé → Bailarino,1.0
+70,a_estrela_w4,3,True,3.0,2771,2.0614,,Zona_Sul_de_Porto_Alegre → Pedra_Redonda_(Porto_Alegre) → Balé → Bailarino,1.0
+70,a_estrela_w8,3,True,3.0,370,0.2341,,Zona_Sul_de_Porto_Alegre → Pedra_Redonda_(Porto_Alegre) → Balé → Bailarino,1.0
+70,guloso_semantico,3,False,,50,0.0169,limite de cliques,,
+70,guloso_grau,3,False,,50,0.0313,limite de cliques,,
+70,aleatorio,3,False,,50,0.0009,limite de cliques,,
+71,bfs_bidirecional,4,True,4.0,21,0.0026,,Linfa_(mitologia) → Latim → Bula_pontifícia → Laudabiliter → Ato_dos_Títulos_Reais_e_Parlamentares_(1927),1.0
+71,a_estrela_w1,4,False,,20000,9.7689,limite de consultas,,
+71,a_estrela_w2,4,False,,20000,9.5269,limite de consultas,,
+71,a_estrela_w4,4,True,4.0,9993,5.8312,,Linfa_(mitologia) → Politeísmo_celta → Irlanda → Estatuto_de_Westminster → Ato_dos_Títulos_Reais_e_Parlamentares_(1927),1.0
+71,a_estrela_w8,4,True,4.0,1529,1.0001,,Linfa_(mitologia) → Cristianismo_primitivo → Reforma_Inglesa → União_das_Coroas → Ato_dos_Títulos_Reais_e_Parlamentares_(1927),1.0
+71,guloso_semantico,4,False,,50,0.0168,limite de cliques,,
+71,guloso_grau,4,False,,50,0.0212,limite de cliques,,
+71,aleatorio,4,False,,49,0.0017,limite de cliques,,
+72,bfs_bidirecional,4,True,4.0,27,0.0037,,Joseph_Arthur_Ankrah → Estados_Unidos → Idade_Média → Roberto_I_da_Escócia → Abadia_de_Dunfermline,1.0
+72,a_estrela_w1,4,False,,20000,12.0778,limite de consultas,,
+72,a_estrela_w2,4,False,,20000,11.5392,limite de consultas,,
+72,a_estrela_w4,4,False,,20000,11.0427,limite de consultas,,
+72,a_estrela_w8,4,True,4.0,1184,0.644,,Joseph_Arthur_Ankrah → Reino_Unido → Palácio_de_Westminster → Palácio_de_Dunfermline → Abadia_de_Dunfermline,1.0
+72,guloso_semantico,4,False,,50,0.0184,limite de cliques,,
+72,guloso_grau,4,False,,50,0.0356,limite de cliques,,
+72,aleatorio,4,False,,47,0.0018,limite de cliques,,
+73,bfs_bidirecional,4,True,4.0,8,0.0008,,Delegado → Delegado_(mestre-sala) → Rio_de_Janeiro_(estado) → Edmundo_(futebolista) → Quintino_Gomes_Freire,1.0
+73,a_estrela_w1,4,False,,20000,11.7388,limite de consultas,,
+73,a_estrela_w2,4,False,,20000,11.3362,limite de consultas,,
+73,a_estrela_w4,4,True,4.0,2184,1.3587,,Delegado → Delegado_(mestre-sala) → Mussum → Andréa_Sorvetão → Quintino_Gomes_Freire,1.0
+73,a_estrela_w8,4,True,4.0,2481,1.42,,Delegado → Delegado_(mestre-sala) → Mussum → Andréa_Sorvetão → Quintino_Gomes_Freire,1.0
+73,guloso_semantico,4,False,,50,0.0254,limite de cliques,,
+73,guloso_grau,4,False,,50,0.0218,limite de cliques,,
+73,aleatorio,4,False,,49,0.0011,limite de cliques,,
+74,bfs_bidirecional,4,True,4.0,20,0.0028,,Diegodendraceae → Classificação_científica → Língua_árabe → Papa → Papa_Inocêncio_VII,1.0
+74,a_estrela_w1,4,False,,20000,9.0867,limite de consultas,,
+74,a_estrela_w2,4,False,,20000,8.4757,limite de consultas,,
+74,a_estrela_w4,4,True,4.0,2356,1.4742,,Diegodendraceae → Classificação_científica → Renascimento → Papa_Júlio_II → Papa_Inocêncio_VII,1.0
+74,a_estrela_w8,4,True,4.0,314,0.197,,Diegodendraceae → Classificação_científica → Renascimento → Papa_Júlio_II → Papa_Inocêncio_VII,1.0
+74,guloso_semantico,4,True,13.0,13,0.0033,,Diegodendraceae → Malvidae → Malva_sylvestris → UNII → Medicamento → Wikcionário → Russo → Russo_(assistente_de_palco) → Coração → Christianismi_Restitutio → Trindade_(cristianismo) → Concílio_Vaticano_II → Papa_Pio_IX → Papa_Inocêncio_VII,3.25
+74,guloso_grau,4,False,,50,0.0247,limite de cliques,,
+74,aleatorio,4,False,,48,0.0096,limite de cliques,,
+75,bfs_bidirecional,4,True,4.0,16,0.0009,,Marciana_Marina → Itália → Irlanda → Guinness → Veuve_Clicquot,1.0
+75,a_estrela_w1,4,False,,20000,7.9024,limite de consultas,,
+75,a_estrela_w2,4,False,,20000,7.7105,limite de consultas,,
+75,a_estrela_w4,4,False,,20000,8.0204,limite de consultas,,
+75,a_estrela_w8,4,False,,20000,8.3278,limite de consultas,,
+75,guloso_semantico,4,False,,50,0.0217,limite de cliques,,
+75,guloso_grau,4,False,,50,0.1009,limite de cliques,,
+75,aleatorio,4,False,,49,0.001,limite de cliques,,
+76,bfs_bidirecional,5,True,5.0,49,0.035,,Problemas_de_Taniyama → André_Weil → Estrasburgo → Lista_de_comunas_do_Baixo_Reno → Lista_de_comunas_de_Mayenne → Placé,1.0
+76,a_estrela_w1,5,False,,20000,7.9386,limite de consultas,,
+76,a_estrela_w2,5,False,,20000,9.5077,limite de consultas,,
+76,a_estrela_w4,5,False,,20000,9.5065,limite de consultas,,
+76,a_estrela_w8,5,False,,20000,8.228,limite de consultas,,
+76,guloso_semantico,5,False,,50,0.0137,limite de cliques,,
+76,guloso_grau,5,False,,50,0.0189,limite de cliques,,
+76,aleatorio,5,False,,50,0.0009,limite de cliques,,
+77,bfs_bidirecional,3,True,3.0,4,0.0012,,A_Justiça_de_Deus → Brasil → 1_de_janeiro → Devlet_Bahçeli,1.0
+77,a_estrela_w1,3,True,3.0,11142,7.9781,,A_Justiça_de_Deus → Brasil → Potências_do_Eixo → Devlet_Bahçeli,1.0
+77,a_estrela_w2,3,True,3.0,11140,7.9389,,A_Justiça_de_Deus → Brasil → Potências_do_Eixo → Devlet_Bahçeli,1.0
+77,a_estrela_w4,3,True,3.0,3659,2.6569,,A_Justiça_de_Deus → Brasil → Potências_do_Eixo → Devlet_Bahçeli,1.0
+77,a_estrela_w8,3,True,3.0,4681,3.1659,,A_Justiça_de_Deus → Brasil → Potências_do_Eixo → Devlet_Bahçeli,1.0
+77,guloso_semantico,3,False,,50,0.0213,limite de cliques,,
+77,guloso_grau,3,False,,50,0.0354,limite de cliques,,
+77,aleatorio,3,False,,49,0.0032,limite de cliques,,
+78,bfs_bidirecional,4,True,4.0,12,0.0032,,Weng → Alemanha → Albert_Einstein → Niels_Bohr → Christian_Bohr,1.0
+78,a_estrela_w1,4,False,,20000,8.4786,limite de consultas,,
+78,a_estrela_w2,4,False,,20000,9.318,limite de consultas,,
+78,a_estrela_w4,4,True,4.0,7156,4.0321,,Weng → Partido_político → Cientista → Niels_Bohr → Christian_Bohr,1.0
+78,a_estrela_w8,4,True,4.0,235,0.1441,,Weng → Alemanha → Hans_Geiger → Niels_Bohr → Christian_Bohr,1.0
+78,guloso_semantico,4,False,,50,0.0291,limite de cliques,,
+78,guloso_grau,4,False,,50,0.022,limite de cliques,,
+78,aleatorio,4,False,,50,0.0012,limite de cliques,,
+79,bfs_bidirecional,4,True,4.0,4,0.0003,,Longaulnay → França → Oxigénio → Adesivo → Cola_(desambiguação),1.0
+79,a_estrela_w1,4,False,,20000,9.6081,limite de consultas,,
+79,a_estrela_w2,4,False,,20000,9.3258,limite de consultas,,
+79,a_estrela_w4,4,True,4.0,8822,4.5186,,Longaulnay → França → Oxigénio → Adesivo → Cola_(desambiguação),1.0
+79,a_estrela_w8,4,True,4.0,7723,4.3972,,Longaulnay → França → Oxigénio → Adesivo → Cola_(desambiguação),1.0
+79,guloso_semantico,4,False,,50,0.0101,limite de cliques,,
+79,guloso_grau,4,False,,50,0.025,limite de cliques,,
+79,aleatorio,4,False,,50,0.0009,limite de cliques,,
+80,bfs_bidirecional,3,True,3.0,3,0.0004,,Nađa_Higl → 2_de_janeiro → 2_de_abril → 1719,1.0
+80,a_estrela_w1,3,True,3.0,3326,3.383,,Nađa_Higl → 2_de_janeiro → 1777 → 1719,1.0
+80,a_estrela_w2,3,True,3.0,3324,3.2439,,Nađa_Higl → 2_de_janeiro → 1777 → 1719,1.0
+80,a_estrela_w4,3,True,3.0,300,0.2319,,Nađa_Higl → 2_de_janeiro → 1777 → 1719,1.0
+80,a_estrela_w8,3,True,3.0,57,0.0203,,Nađa_Higl → 2_de_janeiro → 1777 → 1719,1.0
+80,guloso_semantico,3,True,12.0,12,0.0029,,Nađa_Higl → 1987 → 1926 → 1922 → 1925 → 1923 → 1855 → 1780 → Década_de_1730 → 1730 → 1728 → 1724 → 1719,4.0
+80,guloso_grau,3,False,,50,0.0191,limite de cliques,,
+80,aleatorio,3,False,,50,0.0015,limite de cliques,,
+81,bfs_bidirecional,4,True,4.0,10,0.0008,,Museu_da_Indústria_Têxtil_da_Bacia_do_Ave → Museu → Instituto_do_Patrimônio_Histórico_e_Artístico_Nacional → Lista_de_bens_tombados_pelo_Conpresp → Escola_Estadual_Conselheiro_Antonio_Prado,1.0
+81,a_estrela_w1,4,False,,20000,8.2403,limite de consultas,,
+81,a_estrela_w2,4,False,,20000,8.2539,limite de consultas,,
+81,a_estrela_w4,4,False,,20000,8.7947,limite de consultas,,
+81,a_estrela_w8,4,False,,20000,8.5925,limite de consultas,,
+81,guloso_semantico,4,False,,50,0.0212,limite de cliques,,
+81,guloso_grau,4,False,,50,0.0837,limite de cliques,,
+81,aleatorio,4,False,,48,0.001,limite de cliques,,
+82,bfs_bidirecional,3,True,3.0,4,0.0004,,Orlando_Lobato → Amapá → Capanema_(Paraná) → Indicação_geográfica_no_Brasil,1.0
+82,a_estrela_w1,3,True,3.0,7417,5.9163,,Orlando_Lobato → Amapá → Capanema_(Paraná) → Indicação_geográfica_no_Brasil,1.0
+82,a_estrela_w2,3,True,3.0,7347,5.5345,,Orlando_Lobato → Amapá → Capanema_(Paraná) → Indicação_geográfica_no_Brasil,1.0
+82,a_estrela_w4,3,True,3.0,741,0.8798,,Orlando_Lobato → Amapá → Capanema_(Paraná) → Indicação_geográfica_no_Brasil,1.0
+82,a_estrela_w8,3,True,3.0,422,0.4922,,Orlando_Lobato → Amapá → Capanema_(Paraná) → Indicação_geográfica_no_Brasil,1.0
+82,guloso_semantico,3,False,,50,0.0506,limite de cliques,,
+82,guloso_grau,3,False,,50,0.0489,limite de cliques,,
+82,aleatorio,3,False,,50,0.0014,limite de cliques,,
+83,bfs_bidirecional,3,True,3.0,3,0.0004,,Stars_Dance_Tour → Filipinas → A_Igreja_de_Jesus_Cristo_dos_Santos_dos_Últimos_Dias → Dieter_F._Uchtdorf,1.0
+83,a_estrela_w1,3,False,,20000,10.9226,limite de consultas,,
+83,a_estrela_w2,3,False,,20000,10.6511,limite de consultas,,
+83,a_estrela_w4,3,True,3.0,12584,6.9274,,Stars_Dance_Tour → Dallas → A_Igreja_de_Jesus_Cristo_dos_Santos_dos_Últimos_Dias → Dieter_F._Uchtdorf,1.0
+83,a_estrela_w8,3,False,,20000,8.9964,limite de consultas,,
+83,guloso_semantico,3,False,,50,0.0143,limite de cliques,,
+83,guloso_grau,3,False,,50,0.033,limite de cliques,,
+83,aleatorio,3,False,,50,0.0016,limite de cliques,,
+84,bfs_bidirecional,3,True,3.0,6,0.0005,,(37756)_1997_EH11 → Magnitude_absoluta → Lista_das_maiores_estrelas_conhecidas → PZ_Cassiopeiae,1.0
+84,a_estrela_w1,3,True,3.0,1869,0.6216,,(37756)_1997_EH11 → Magnitude_absoluta → Lista_das_maiores_estrelas_conhecidas → PZ_Cassiopeiae,1.0
+84,a_estrela_w2,3,True,3.0,1864,0.5599,,(37756)_1997_EH11 → Magnitude_absoluta → Lista_das_maiores_estrelas_conhecidas → PZ_Cassiopeiae,1.0
+84,a_estrela_w4,3,True,3.0,1565,0.6097,,(37756)_1997_EH11 → Magnitude_absoluta → Lista_das_maiores_estrelas_conhecidas → PZ_Cassiopeiae,1.0
+84,a_estrela_w8,3,True,4.0,37,0.0212,,(37756)_1997_EH11 → Magnitude_absoluta → Variável_Gamma_Cassiopeiae → Gamma_Cassiopeiae → PZ_Cassiopeiae,1.3333333333333333
+84,guloso_semantico,3,False,,50,0.016,limite de cliques,,
+84,guloso_grau,3,False,,50,0.0233,limite de cliques,,
+84,aleatorio,3,False,,48,0.0009,limite de cliques,,
+85,bfs_bidirecional,3,True,3.0,8,0.0035,,Eraserhead → Frequência → Luz → Fotomorfogénese,1.0
+85,a_estrela_w1,3,True,3.0,19955,13.2914,,Eraserhead → Reverberação → Luz → Fotomorfogénese,1.0
+85,a_estrela_w2,3,True,3.0,19272,14.1818,,Eraserhead → Reverberação → Luz → Fotomorfogénese,1.0
+85,a_estrela_w4,3,True,3.0,419,0.1805,,Eraserhead → Reverberação → Luz → Fotomorfogénese,1.0
+85,a_estrela_w8,3,True,4.0,257,0.1391,,Eraserhead → Encyclopædia_Britannica → Biologia → Fotossíntese → Fotomorfogénese,1.3333333333333333
+85,guloso_semantico,3,True,16.0,16,0.0175,,Eraserhead → Diretor_de_fotografia → Fotograma → Imagem → Fotografia → Diafragma_fotográfico → Câmera → Photokina → Reprografia → Fotocopiadora → Diodo_emissor_de_luz → Fotodiodo → Fototransístor → Fotão → Fotosfera → Luz → Fotomorfogénese,5.333333333333333
+85,guloso_grau,3,False,,50,0.0378,limite de cliques,,
+85,aleatorio,3,False,,48,0.0019,limite de cliques,,
+86,bfs_bidirecional,4,True,4.0,13,0.0026,,Ponto_(tipografia) → Serviço_Nacional_de_Aprendizagem_Comercial → Estação_da_Luz → Turismo_no_Paraná → Cânion_da_Igreja_Velha,1.0
+86,a_estrela_w1,4,False,,20000,12.1728,limite de consultas,,
+86,a_estrela_w2,4,False,,20000,12.0989,limite de consultas,,
+86,a_estrela_w4,4,False,,20000,11.9591,limite de consultas,,
+86,a_estrela_w8,4,False,,20000,10.1676,limite de consultas,,
+86,guloso_semantico,4,False,,50,0.0421,limite de cliques,,
+86,guloso_grau,4,False,,50,0.0244,limite de cliques,,
+86,aleatorio,4,False,,50,0.0009,limite de cliques,,
+87,bfs_bidirecional,4,True,4.0,5,0.0003,,Sinechostictus_cribrum → Classificação_científica → Basidiomycota → Mycena → Mycena_stylobates,1.0
+87,a_estrela_w1,4,False,,20000,7.0116,limite de consultas,,
+87,a_estrela_w2,4,False,,20000,7.3257,limite de consultas,,
+87,a_estrela_w4,4,True,4.0,4415,2.4889,,Sinechostictus_cribrum → Artrópode → Basidiomycota → Mycena → Mycena_stylobates,1.0
+87,a_estrela_w8,4,True,4.0,340,0.1034,,Sinechostictus_cribrum → Artrópode → Basidiomycota → Mycena → Mycena_stylobates,1.0
+87,guloso_semantico,4,False,,50,0.0172,limite de cliques,,
+87,guloso_grau,4,False,,50,0.0391,limite de cliques,,
+87,aleatorio,4,False,,48,0.0009,limite de cliques,,
+88,bfs_bidirecional,3,True,3.0,6,0.0008,,Mortzwiller → 1_de_janeiro → Helen_Wills_Moody → Margaret_Scriven,1.0
+88,a_estrela_w1,3,True,3.0,4013,3.9867,,Mortzwiller → 1_de_janeiro → Helen_Wills_Moody → Margaret_Scriven,1.0
+88,a_estrela_w2,3,True,3.0,3999,4.1985,,Mortzwiller → 1_de_janeiro → Helen_Wills_Moody → Margaret_Scriven,1.0
+88,a_estrela_w4,3,True,3.0,90,0.0535,,Mortzwiller → 1_de_janeiro → Helen_Wills_Moody → Margaret_Scriven,1.0
+88,a_estrela_w8,3,True,3.0,55,0.0573,,Mortzwiller → 1_de_janeiro → Helen_Wills_Moody → Margaret_Scriven,1.0
+88,guloso_semantico,3,False,,50,0.0356,limite de cliques,,
+88,guloso_grau,3,False,,50,0.0409,limite de cliques,,
+88,aleatorio,3,False,,49,0.0013,limite de cliques,,
+89,bfs_bidirecional,3,True,3.0,3,0.0004,,Sparks_(Nevada) → Estados_Unidos → Honduras → Ramón_Villeda_Morales,1.0
+89,a_estrela_w1,3,True,3.0,5832,3.9819,,Sparks_(Nevada) → Estados_Unidos → Honduras → Ramón_Villeda_Morales,1.0
+89,a_estrela_w2,3,True,3.0,5754,3.3271,,Sparks_(Nevada) → Estados_Unidos → Honduras → Ramón_Villeda_Morales,1.0
+89,a_estrela_w4,3,True,3.0,215,0.1345,,Sparks_(Nevada) → Estados_Unidos → Honduras → Ramón_Villeda_Morales,1.0
+89,a_estrela_w8,3,True,3.0,157,0.0916,,Sparks_(Nevada) → Estados_Unidos → Honduras → Ramón_Villeda_Morales,1.0
+89,guloso_semantico,3,False,,50,0.0131,limite de cliques,,
+89,guloso_grau,3,False,,50,0.019,limite de cliques,,
+89,aleatorio,3,False,,50,0.0009,limite de cliques,,
+90,bfs_bidirecional,4,True,4.0,14,0.0013,,Tobias_Ludvigsson → 2012 → Belo_Horizonte → Barreiro_(região_de_Belo_Horizonte) → Estação_BHBUS_Barreiro,1.0
+90,a_estrela_w1,4,False,,20000,10.8736,limite de consultas,,
+90,a_estrela_w2,4,False,,20000,10.3862,limite de consultas,,
+90,a_estrela_w4,4,False,,20000,10.8089,limite de consultas,,
+90,a_estrela_w8,4,True,4.0,752,0.5312,,Tobias_Ludvigsson → 2012 → Belo_Horizonte → Estação_Barreiro → Estação_BHBUS_Barreiro,1.0
+90,guloso_semantico,4,False,,50,0.0235,limite de cliques,,
+90,guloso_grau,4,False,,50,0.0373,limite de cliques,,
+90,aleatorio,4,False,,50,0.001,limite de cliques,,
+91,bfs_bidirecional,5,True,5.0,46,0.0016,,Campanha_de_Oriente → Venezuela → Estados_dos_Estados_Unidos → Cheyenne_(Wyoming) → Pinedale → Big_Piney,1.0
+91,a_estrela_w1,5,False,,20000,9.0833,limite de consultas,,
+91,a_estrela_w2,5,False,,20000,8.5514,limite de consultas,,
+91,a_estrela_w4,5,False,,20000,8.9055,limite de consultas,,
+91,a_estrela_w8,5,False,,20000,9.0929,limite de consultas,,
+91,guloso_semantico,5,False,,50,0.0151,limite de cliques,,
+91,guloso_grau,5,False,,50,0.0208,limite de cliques,,
+91,aleatorio,5,False,,49,0.0009,limite de cliques,,
+92,bfs_bidirecional,5,True,5.0,214,0.0582,,Bengasi_(província) → Fezã → Década_de_1970 → Caetano_Veloso → Show_das_Poderosas → Tócame,1.0
+92,a_estrela_w1,5,False,,20000,9.0403,limite de consultas,,
+92,a_estrela_w2,5,False,,20000,9.632,limite de consultas,,
+92,a_estrela_w4,5,False,,20000,9.2033,limite de consultas,,
+92,a_estrela_w8,5,True,5.0,13870,5.8575,,Bengasi_(província) → Romanização_(linguística) → Universidade_Federal_de_Sergipe → Pabllo_Vittar → Sua_Cara → Tócame,1.0
+92,guloso_semantico,5,False,,50,0.0276,limite de cliques,,
+92,guloso_grau,5,False,,50,0.0258,limite de cliques,,
+92,aleatorio,5,False,,50,0.0011,limite de cliques,,
+93,bfs_bidirecional,4,True,4.0,58,0.0022,,"Língua_diyari → Blog → Microsoft → Atari,_Inc. → Asteroids",1.0
+93,a_estrela_w1,4,False,,20000,9.1353,limite de consultas,,
+93,a_estrela_w2,4,False,,20000,8.9028,limite de consultas,,
+93,a_estrela_w4,4,True,4.0,4809,2.867,,Língua_diyari → Dialeto → Século_XX → Space_Invaders → Asteroids,1.0
+93,a_estrela_w8,4,True,5.0,1827,1.0419,,Língua_diyari → Deserto_Tirari-Sturt → Antártida → Asteroide → Asteroide_(desambiguação) → Asteroids,1.25
+93,guloso_semantico,4,False,,50,0.0185,limite de cliques,,
+93,guloso_grau,4,False,,50,0.0244,limite de cliques,,
+93,aleatorio,4,False,,47,0.0009,limite de cliques,,
+94,bfs_bidirecional,5,True,5.0,17,0.0007,,Blackdiamondskye → Canadá → Setembro → Arcanjo → Ramiel → Araciel,1.0
+94,a_estrela_w1,5,False,,20000,11.0152,limite de consultas,,
+94,a_estrela_w2,5,False,,20000,10.982,limite de consultas,,
+94,a_estrela_w4,5,False,,20000,11.1676,limite de consultas,,
+94,a_estrela_w8,5,False,,20000,9.4906,limite de consultas,,
+94,guloso_semantico,5,False,,50,0.0586,limite de cliques,,
+94,guloso_grau,5,False,,50,0.0312,limite de cliques,,
+94,aleatorio,5,False,,48,0.001,limite de cliques,,
+95,bfs_bidirecional,3,True,3.0,3,0.0007,,Betta → Malásia → 16_de_setembro → Anne_Keothavong,1.0
+95,a_estrela_w1,3,True,3.0,8142,6.4502,,Betta → Malásia → 16_de_setembro → Anne_Keothavong,1.0
+95,a_estrela_w2,3,True,3.0,8121,5.5933,,Betta → Malásia → 16_de_setembro → Anne_Keothavong,1.0
+95,a_estrela_w4,3,True,3.0,2595,1.4587,,Betta → Malásia → 16_de_setembro → Anne_Keothavong,1.0
+95,a_estrela_w8,3,True,3.0,3655,1.7958,,Betta → Malásia → 16_de_setembro → Anne_Keothavong,1.0
+95,guloso_semantico,3,False,,50,0.0323,limite de cliques,,
+95,guloso_grau,3,False,,50,0.0272,limite de cliques,,
+95,aleatorio,3,False,,50,0.0011,limite de cliques,,
+96,bfs_bidirecional,4,True,4.0,12,0.0007,,Lacrimosa_(Réquiem) → Wolfgang_Amadeus_Mozart → 27_de_janeiro → Rosamund_Pike → Patrika_Darbo,1.0
+96,a_estrela_w1,4,False,,20000,9.0833,limite de consultas,,
+96,a_estrela_w2,4,False,,20000,8.8814,limite de consultas,,
+96,a_estrela_w4,4,False,,20000,8.752,limite de consultas,,
+96,a_estrela_w8,4,False,,20000,8.7541,limite de consultas,,
+96,guloso_semantico,4,False,,50,0.0154,limite de cliques,,
+96,guloso_grau,4,False,,50,0.0328,limite de cliques,,
+96,aleatorio,4,False,,50,0.001,limite de cliques,,
+97,bfs_bidirecional,4,True,4.0,38,0.0073,,Slipknot_Demo → Guitarra → Instrumento_musical → Nova_Guiné → Ualabi,1.0
+97,a_estrela_w1,4,False,,20000,8.5771,limite de consultas,,
+97,a_estrela_w2,4,False,,20000,9.1221,limite de consultas,,
+97,a_estrela_w4,4,False,,20000,9.2219,limite de consultas,,
+97,a_estrela_w8,4,True,4.0,5502,3.0086,,Slipknot_Demo → Slipknot → Austrália → Dingo → Ualabi,1.0
+97,guloso_semantico,4,False,,50,0.0165,limite de cliques,,
+97,guloso_grau,4,False,,50,0.0208,limite de cliques,,
+97,aleatorio,4,False,,49,0.0011,limite de cliques,,
+98,bfs_bidirecional,5,True,5.0,24,0.002,,Villers-Brûlin → Institut_national_de_la_statistique_et_des_études_économiques → 1974 → Joelma → Top_Álbuns_Brasil → Álbuns_número_um_no_Brasil_em_2013,1.0
+98,a_estrela_w1,5,False,,20000,11.8387,limite de consultas,,
+98,a_estrela_w2,5,False,,20000,11.3401,limite de consultas,,
+98,a_estrela_w4,5,False,,20000,11.2163,limite de consultas,,
+98,a_estrela_w8,5,False,,20000,11.2252,limite de consultas,,
+98,guloso_semantico,5,False,,50,0.0409,limite de cliques,,
+98,guloso_grau,5,False,,50,0.031,limite de cliques,,
+98,aleatorio,5,False,,50,0.0055,limite de cliques,,
+99,bfs_bidirecional,5,True,5.0,44,0.0134,,Esperando_na_Janela → Brasil → Polónia → Baixa_Silésia_(voivodia) → Strzelce_Opolskie → Tysmenytsia,1.0
+99,a_estrela_w1,5,False,,20000,9.7904,limite de consultas,,
+99,a_estrela_w2,5,False,,20000,10.0561,limite de consultas,,
+99,a_estrela_w4,5,False,,20000,10.5479,limite de consultas,,
+99,a_estrela_w8,5,False,,20000,8.9878,limite de consultas,,
+99,guloso_semantico,5,False,,50,0.0197,limite de cliques,,
+99,guloso_grau,5,False,,50,0.0236,limite de cliques,,
+99,aleatorio,5,False,,50,0.0015,limite de cliques,,
