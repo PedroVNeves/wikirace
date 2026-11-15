@@ -35,6 +35,15 @@ def normaliza(titulo):
     return t[:1].upper() + t[1:]
 
 
+def _espera(resposta, tentativa):
+    """Segundos até tentar de novo: usa o Retry-After do servidor se vier."""
+    headers = getattr(resposta, "headers", None) or {}
+    try:
+        return min(float(headers.get("Retry-After", "")), 60.0)
+    except ValueError:
+        return min(2.0 ** tentativa, 60.0)
+
+
 class Cache:
     def __init__(self, caminho=":memory:"):
         self.db = sqlite3.connect(str(caminho))
@@ -62,21 +71,24 @@ class WikipediaAPI:
     # ----------------------------------------------------------- baixo nível
     def _get(self, **params):
         params.update(format="json", formatversion=2, maxlag=5)
-        for tentativa in range(5):
+        motivo = ""
+        for tentativa in range(8):
             r = self.sessao.get(self.url, params=params, timeout=30)
             self.requisicoes += 1
-            if r.status_code == 429:          # muitas requisições: espera e tenta de novo
-                time.sleep(2 ** tentativa)
+            if r.status_code in (429, 503):   # muitas requisições: espera e tenta de novo
+                motivo = f"HTTP {r.status_code}"
+                time.sleep(_espera(r, tentativa))
                 continue
             r.raise_for_status()
             dados = r.json()
             if dados.get("error", {}).get("code") == "maxlag":  # servidor ocupado
-                time.sleep(2 ** tentativa)
+                motivo = "maxlag"
+                time.sleep(_espera(r, tentativa))
                 continue
             if self.pausa:
                 time.sleep(self.pausa)
             return dados
-        raise RuntimeError("API da Wikipédia não respondeu")
+        raise RuntimeError(f"API da Wikipédia não respondeu ({motivo})")
 
     def _consulta_paginada(self, **params):
         """Segue o ``continue`` da API até acabar."""

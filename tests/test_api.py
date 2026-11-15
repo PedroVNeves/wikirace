@@ -115,3 +115,24 @@ def test_api_de_verdade():
     assert "Inglaterra" in api.links("Pelé")
     assert api.resolve("Rei do Futebol") == "Pelé"
     assert api.primeiro_link("Pelé") is not None
+
+
+def test_respeita_retry_after(monkeypatch):
+    esperas = []
+    monkeypatch.setattr("time.sleep", esperas.append)
+
+    class Resp429(RespostaFalsa):
+        headers = {"Retry-After": "7"}
+
+    respostas = iter([Resp429({}, 429),
+                      RespostaFalsa({"query": {"pages": [{"ns": 0, "title": "Pelé"}]}})])
+    api = WikipediaAPI(sessao=SessaoFalsa(lambda p: next(respostas)))
+    assert api.resolve("Pelé") == "Pelé"
+    assert esperas == [7.0]
+
+
+def test_desiste_com_mensagem(monkeypatch):
+    monkeypatch.setattr("time.sleep", lambda s: None)
+    api = WikipediaAPI(sessao=SessaoFalsa(lambda p: RespostaFalsa({}, 429)))
+    with pytest.raises(RuntimeError, match="HTTP 429"):
+        api.resolve("Pelé")
