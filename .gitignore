@@ -11,12 +11,6 @@ data/
 *.npz
 *.npy
 
-# relatório (arquivos auxiliares do LaTeX)
-relatorio/*.aux
-relatorio/*.log
-relatorio/*.out
-relatorio/*.toc
-
 .vscode/
 .idea/
 .DS_Store
