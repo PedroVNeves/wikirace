@@ -41,22 +41,29 @@ class Grafo:
         laços ``u -> u`` são descartados: clicar no próprio artigo não ajuda
         ninguém no Wikirace.
         """
-        origens = np.asarray(origens, dtype=np.int64)
-        destinos = np.asarray(destinos, dtype=np.int64)
+        origens = np.asarray(origens)
+        destinos = np.asarray(destinos)
         if len(origens) != len(destinos):
             raise ValueError("origens e destinos com tamanhos diferentes")
         if len(origens) and (min(origens.min(), destinos.min()) < 0
                              or max(origens.max(), destinos.max()) >= n):
             raise ValueError("vértice fora do intervalo [0, n)")
+        # codifica (u, v) num inteiro só: u * n + v. Ordenar as chaves agrupa
+        # por origem (e ordena os vizinhos), e repetidas ficam lado a lado.
+        # Faço tudo in-place porque no grafo inteiro são ~10^8 arestas.
+        chave = origens.astype(np.int64) * n
+        chave += destinos
         if remover_lacos:
-            ok = origens != destinos
-            origens, destinos = origens[ok], destinos[ok]
-        # codifica (u, v) num inteiro só; np.unique ordena e tira repetidas
-        chave = np.unique(origens * n + destinos)
-        origens, destinos = chave // n, chave % n
+            chave = chave[origens != destinos]
+        chave.sort()
+        if len(chave):
+            manter = np.empty(len(chave), dtype=bool)
+            manter[0] = True
+            np.not_equal(chave[1:], chave[:-1], out=manter[1:])
+            chave = chave[manter]
         indptr = np.zeros(n + 1, dtype=np.int64)
-        np.cumsum(np.bincount(origens, minlength=n), out=indptr[1:])
-        return cls(indptr, destinos.astype(np.int32), titulos)
+        np.cumsum(np.bincount(chave // n, minlength=n), out=indptr[1:])
+        return cls(indptr, (chave % n).astype(np.int32), titulos)
 
     @classmethod
     def de_dicionario(cls, adj):
