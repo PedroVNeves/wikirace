@@ -7,18 +7,18 @@ depois de ter teste passando e de eu revisar o código.
 
 ## Partes
 
-- [ ] **0. Estrutura** — repositório, dependências, configuração de testes.
-- [ ] **1. Grafo em CSR** — estrutura compacta (`indptr`/`indices`), graus de
+- [x] **0. Estrutura** — repositório, dependências, configuração de testes.
+- [x] **1. Grafo em CSR** — estrutura compacta (`indptr`/`indices`), graus de
       entrada e saída, grafo transposto. Teste do lema do aperto de mãos dirigido.
-- [ ] **2. BFS e BFS bidirecional** — distâncias, reconstrução de caminho,
+- [x] **2. BFS e BFS bidirecional** — distâncias, reconstrução de caminho,
       BFS vetorizada em numpy para as análises. Testes contra força bruta.
-- [ ] **3. Pipeline dos dumps** — download, parser dos `.sql.gz`
+- [x] **3. Pipeline dos dumps** — download, parser dos `.sql.gz`
       (`page`, `linktarget`, `pagelinks`, `redirect`), resolução de
       redirecionamentos, grafo final salvo em `.npz`.
-- [ ] **4. API da Wikipédia** — cliente para buscar links ao vivo, com cache.
-- [ ] **5. Agentes** — passeio aleatório, guloso por grau, guloso semântico,
+- [x] **4. API da Wikipédia** — cliente para buscar links ao vivo, com cache.
+- [x] **5. Agentes** — passeio aleatório, guloso por grau, guloso semântico,
       A\* semântico (com peso `w`). Interface comum e orçamento de cliques.
-- [ ] **6. Embeddings** — vetores dos títulos com um modelo multilíngue
+- [x] **6. Embeddings** — vetores dos títulos com um modelo multilíngue
       (sentence-transformers), salvos em disco.
 - [ ] **7. Experimento principal** — 100 pares sorteados, todos os agentes,
       métricas (razão cliques/ótimo, artigos consultados, taxa de sucesso).
@@ -29,6 +29,17 @@ depois de ter teste passando e de eu revisar o código.
 - [ ] **11. Revisão final.**
 
 ## Decisões
+
+- O grafo final (dump de 01/11/2026) tem 1.187.101 artigos e 80.389.152 links;
+  montar tudo leva ~3 min e a BFS bidirecional responde em milissegundos.
+- Heurística do A\*: `h(v) = (1 - cos(v, t)) / 2`. Como fica em [0, 1] e
+  `d(v, t) >= 1` para `v != t`, ela é admissível. O peso `w` do A\* ponderado
+  controla a troca entre otimalidade (garantia de no máximo `w` vezes o
+  ótimo) e exploração. Rodo com `w = 1, 2, 4, 8`.
+- Caminhantes (gulosos e aleatório) podem apertar "voltar" quando caem num
+  beco; isso conta como clique.
+- A parte 8 (análises) foi feita antes da 7, enquanto os embeddings
+  calculavam.
 
 - Os dados pesados (dumps e grafo) ficam fora do repositório, na pasta
   definida por `WIKIRACE_DATA` (padrão: `./data`).
