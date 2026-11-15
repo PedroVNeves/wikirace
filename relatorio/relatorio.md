@@ -59,10 +59,10 @@ nós (26 s no grafo inteiro; dá exatamente a mesma partição que o
 | outros | 316 | nem uma coisa nem outra |
 
 Quase tudo que fica de fora está em **IN**: artigos que linkam para o resto,
-mas que **ninguém linka** — muitas páginas de desambiguação ("Abel
-(desambiguação)", "Cunha (desambiguação)"), listas ordenadas e artigos órfãos.
-Por isso **9,1% dos pares $(u, v)$ não têm caminho**: o problema quase sempre é
-o destino, não a origem.
+mas que ninguém da componente gigante linka. Dos 108.182 artigos fora dela,
+**84,7% são órfãos** (nenhum link de entrada; e.g. "Princípio de Premack",
+"Freguesias de Abrantes ordenadas por área"). Por isso **9,1% dos pares
+$(u, v)$ não têm caminho**: o problema quase sempre é o destino, não a origem.
 
 ### 3.2 Mundo pequeno
 
@@ -83,7 +83,8 @@ grafo de Erdős–Rényi dirigido com os mesmos $|V|$ e $|E|$.
 70% dos pares estão a no máximo 4 cliques e 98,6% a no máximo 6: é um mundo
 pequeno. O **limite de Moore** dá a ordem de grandeza: com $\Delta \approx 100$
 links por artigo, $\log_{100} 1{,}19 \cdot 10^6 \approx 3{,}0$; com o grau médio
-real, $\ln n / \ln 67{,}7 \approx 3{,}3$, que é o que o Erdős–Rényi faz (3,76).
+real, $\ln n / \ln 67{,}7 \approx 3{,}3$. São estimativas por baixo (supõem que
+as bolas crescem sem repetir vértices), e o Erdős–Rényi fica perto delas (3,76).
 
 O curioso é que a Wikipédia é **um pouco mais longa** que o grafo aleatório,
 apesar dos hubs. A explicação está no grau de entrada: a mediana é 10 (contra
@@ -145,7 +146,7 @@ têm caminho em pelo menos um sentido:
 ![assimetria](figuras/assimetria.png)
 
 Entre os pares com caminho nos dois sentidos, a diferença é quase sempre
-pequena (89% diferem em no máximo 1 clique). Ou seja, $d$ é uma quase-métrica
+pequena (em 89% deles $|d(u, v) - d(v, u)| \le 1$). Ou seja, $d$ é uma quase-métrica
 de verdade (Apêndice A.4): a desigualdade triangular vale sempre, mas a simetria
 falha na maioria dos pares.
 
