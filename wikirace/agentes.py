@@ -29,6 +29,11 @@ import numpy as np
 from .busca import bfs_bidirecional
 
 
+def _py(x):
+    """numpy.int32 -> int; strings (ambiente ao vivo) passam direto."""
+    return x.item() if isinstance(x, np.generic) else x
+
+
 # ----------------------------------------------------------------- ambiente
 class AmbienteGrafo:
     """Ambiente offline: o grafo dos dumps + (opcional) embeddings dos títulos."""
@@ -164,7 +169,7 @@ class PasseioAleatorio(Caminhante):
     evita_repetir = False
 
     def escolher(self, amb, candidatos, t, rng):
-        return candidatos[rng.integers(len(candidatos))].item()
+        return _py(candidatos[rng.integers(len(candidatos))])
 
 
 class GulosoGrau(Caminhante):
@@ -172,7 +177,7 @@ class GulosoGrau(Caminhante):
     nome = "guloso_grau"
 
     def escolher(self, amb, candidatos, t, rng):
-        return candidatos[int(np.argmax(amb.grau(candidatos)))].item()
+        return _py(candidatos[int(np.argmax(amb.grau(candidatos)))])
 
 
 class GulosoSemantico(Caminhante):
@@ -180,7 +185,7 @@ class GulosoSemantico(Caminhante):
     nome = "guloso_semantico"
 
     def escolher(self, amb, candidatos, t, rng):
-        return candidatos[int(np.argmax(amb.similaridade(candidatos, t)))].item()
+        return _py(candidatos[int(np.argmax(amb.similaridade(candidatos, t)))])
 
 
 # --------------------------------------------------------------- buscadores
