@@ -87,7 +87,8 @@ HTML_ARTIGO = """
   <p><b>Edson Arantes do Nascimento</b> (<a href="/wiki/Tr%C3%AAs_Cora%C3%A7%C3%B5es">Três
   Corações</a>, 23 de outubro de 1940), conhecido como <i><a href="/wiki/Apelido">Pelé</a></i>,
   <sup class="reference"><a href="#cite_note-1">[1]</a></sup>
-  foi um <a href="/wiki/Ficheiro:Bola.png">img</a> <a href="/wiki/Futebolista" title="Futebolista">futebolista</a>
+  foi um <a href="/wiki/Ficheiro:Bola.png">img</a>
+  <a href="/wiki/Futebolista" title="Futebolista">futebolista</a>
   <a href="/wiki/Brasil">brasileiro</a>.</p>
 </div>
 """

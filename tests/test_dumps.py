@@ -26,7 +26,8 @@ def escreve(pasta, tabela, linhas):
 
 
 def pag(pid, ns, titulo, redir):
-    return f"({pid},{ns},'{titulo}',{redir},0,0.5,'20261101000000','20261101000000',1,10,'wikitext',NULL)"
+    datas = "'20261101000000','20261101000000'"
+    return f"({pid},{ns},'{titulo}',{redir},0,0.5,{datas},1,10,'wikitext',NULL)"
 
 
 @pytest.fixture

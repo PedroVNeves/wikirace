@@ -59,7 +59,8 @@ class AmbienteGrafo:
         if self.emb is None:
             raise RuntimeError("esse agente precisa de embeddings")
         vs = np.asarray(vs, dtype=np.int64)
-        return np.asarray(self.emb[vs], dtype=np.float32) @ np.asarray(self.emb[t], dtype=np.float32)
+        alvo = np.asarray(self.emb[t], dtype=np.float32)
+        return np.asarray(self.emb[vs], dtype=np.float32) @ alvo
 
     def nome(self, u):
         return self.g.titulo(int(u))
