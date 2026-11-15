@@ -1,0 +1,15 @@
+{
+  "vertices": 1187101,
+  "arestas": 80389152,
+  "grau_medio": 67.71888154419885,
+  "grau_saida_max": 7527,
+  "artigo_grau_saida_max": "Lista_de_objetos_NGC",
+  "grau_entrada_max": 185206,
+  "artigo_grau_entrada_max": "Estados_Unidos",
+  "sem_links_de_saida": 611,
+  "sem_links_de_entrada": 91644,
+  "dump": "ptwiki-latest",
+  "segundos": 176,
+  "baixado_em": "2026-11-15",
+  "data_do_dump": "2026-11-01"
+}
