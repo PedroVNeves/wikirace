@@ -150,7 +150,22 @@ pequena (em 89% deles $|d(u, v) - d(v, u)| \le 1$). Ou seja, $d$ é uma quase-m�
 de verdade (Apêndice A.4): a desigualdade triangular vale sempre, mas a simetria
 falha na maioria dos pares.
 
-<!-- BONUS -->
+### 3.5 Bônus: o ciclo do primeiro link
+
+Clicar sempre no primeiro link do texto define uma função $f : V \to V$ — um
+**grafo funcional**. Pelo Apêndice A.4, partindo de qualquer artigo a
+sequência $v, f(v), f^2(v), \dots$ cai num ciclo (casa dos pombos), e cada
+componente tem exatamente um ciclo. A ordem dos links não está nos dumps,
+então isso usa a API (`scripts/primeiro_link.py`, 150 artigos sorteados,
+1 requisição por segundo).
+
+**Situação: a rodar de novo.** Uma primeira execução mostrou que o
+extrator de "primeiro link" tinha falhas (não olhava listas de
+desambiguação, deixava um parêntese sem fechar no texto contaminar o artigo
+inteiro e desistia quando a introdução não tinha link); 23% das corridas
+terminavam "sem link" por isso. O extrator foi corrigido e testado, mas a
+nova execução ainda não terminou, então os números ficam para a próxima
+versão deste relatório — não vamos reportar os da versão com erro.
 
 ## 4. Agentes contra a BFS
 

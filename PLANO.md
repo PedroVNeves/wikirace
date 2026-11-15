@@ -22,12 +22,19 @@ depois de ter teste passando e de eu revisar o código.
       (sentence-transformers), salvos em disco.
 - [x] **7. Experimento principal** — 100 pares sorteados, todos os agentes,
       métricas (razão cliques/ótimo, artigos consultados, taxa de sucesso).
-- [ ] **8. Análises do grafo** — componentes fortemente conexas, mundo pequeno
-      vs. Erdős–Rényi, graus e hubs, assimetria, ciclo do primeiro link.
+- [x] **8. Análises do grafo** — componentes fortemente conexas, mundo pequeno
+      vs. Erdős–Rényi, graus e hubs, assimetria. **Falta:** rodar de novo o
+      ciclo do primeiro link com o extrator corrigido.
 - [x] **9. Demo** — a turma joga contra os agentes.
-- [ ] **10. Relatório** — provas e resultados. (Em Markdown com LaTeX, que o
+- [x] **10. Relatório** — provas e resultados. (Em Markdown com LaTeX, que o
       GitHub renderiza; fica em `relatorio/relatorio.md`.)
-- [ ] **11. Revisão final.**
+- [x] **11. Revisão final** — ruff limpo, 119 testes, checkout limpo passa,
+      afirmações do relatório conferidas nos dados.
+
+## Pendências
+
+- [ ] Rodar `python scripts/primeiro_link.py` e escrever a seção 3.5.
+- [ ] Partidas da turma (`python scripts/jogar.py`) e seção 4.4.
 
 ## Decisões
 
