@@ -2,7 +2,149 @@
 
 **Matemática Discreta — trabalho final** · grafo da Wikipédia em português (dump de 01/11/2026)
 
-<!-- RESULTADOS -->
+## 1. Pergunta
+
+No Wikirace o jogador sai de um artigo e tenta chegar em outro só clicando em
+links. Queremos medir **quanto se perde, em cliques, ao trocar a busca exata
+(BFS) por agentes que escolhem links "por intuição"**, e **quanto cada um
+precisa explorar**. As provas dos teoremas citados estão no Apêndice A; todo o
+código está em `wikirace/` e cada número deste relatório sai de um script em
+`scripts/` (ver o README).
+
+## 2. Dados e modelagem
+
+A Wikipédia em português vira um grafo dirigido $G = (V, E)$: vértices são os
+artigos (domínio principal, sem páginas de redirecionamento) e há uma aresta
+$u \to v$ se o texto de $u$ tem um link para $v$. Montamos o grafo a partir dos
+dumps oficiais (`page`, `redirect`, `linktarget`, `pagelinks`), com estas regras:
+
+* link para um redirecionamento vira link para o artigo final (seguindo cadeias);
+* links vermelhos, para outros domínios ou para redirecionamentos quebrados são descartados;
+* laços e arestas repetidas são removidos.
+
+| | |
+|---|---|
+| artigos $\lvert V \rvert$ | 1.187.101 |
+| links $\lvert E \rvert$ | 80.389.152 |
+| grau médio $\lvert E \rvert / \lvert V \rvert$ | 67,7 |
+| mediana do grau de entrada / saída | 10 / 31 |
+| artigos sem nenhum link de entrada | 91.644 |
+| artigos sem nenhum link de saída | 611 |
+
+O grafo fica em formato CSR (dois vetores, `indptr` e `indices`, ~330 MB) e a
+BFS bidirecional responde em milissegundos. O exemplo da proposta sai igual:
+**Pelé → Inglaterra → Mecânica quântica** (2 cliques).
+
+**Lema do aperto de mãos, conferido:** $\sum_v \deg^+(v) = \sum_v \deg^-(v) = 80.389.152 = |E|$.
+
+## 3. Estrutura do grafo
+
+### 3.1 Conectividade
+
+Calculamos as componentes fortemente conexas com um Kosaraju implementado por
+nós (26 s no grafo inteiro; dá exatamente a mesma partição que o
+`scipy.sparse.csgraph`).
+
+* Há **101.368 CFCs**, mas a maior tem **1.078.919 artigos (90,9%)**; a
+  segunda maior tem só 167. São 98.893 componentes de um vértice só.
+* O grafo das componentes (101.368 vértices, 109.339 arestas) é **acíclico**,
+  como o resultado do Apêndice A.4 garante (conferido com o algoritmo de Kahn).
+* Em relação à componente gigante (estrutura "gravata-borboleta"):
+
+| parte | artigos | o que é |
+|---|---:|---|
+| CFC gigante | 1.078.919 | alcançam e são alcançados por todos da CFC |
+| IN | 107.564 | chegam na CFC, mas ninguém da CFC chega neles |
+| OUT | 302 | alcançados pela CFC, mas sem volta |
+| outros | 316 | nem uma coisa nem outra |
+
+Quase tudo que fica de fora está em **IN**: artigos que linkam para o resto,
+mas que **ninguém linka** — muitas páginas de desambiguação ("Abel
+(desambiguação)", "Cunha (desambiguação)"), listas ordenadas e artigos órfãos.
+Por isso **9,1% dos pares $(u, v)$ não têm caminho**: o problema quase sempre é
+o destino, não a origem.
+
+### 3.2 Mundo pequeno
+
+Rodamos BFS completas a partir de 60 artigos sorteados (cada uma dá a distância
+para todos os 1,19 milhão de destinos: 71 milhões de pares) e fizemos o mesmo num
+grafo de Erdős–Rényi dirigido com os mesmos $|V|$ e $|E|$.
+
+![distâncias](figuras/distancias.png)
+
+| | Wikipédia | Erdős–Rényi |
+|---|---:|---:|
+| distância média (pares com caminho) | **4,25** | 3,76 |
+| mediana | 4 | 4 |
+| 90% dos pares com $d \le$ | 5 | 4 |
+| maior distância vista | 208 | 5 |
+| pares sem caminho | 9,1% | 0% |
+
+70% dos pares estão a no máximo 4 cliques e 98,6% a no máximo 6: é um mundo
+pequeno. O **limite de Moore** dá a ordem de grandeza: com $\Delta \approx 100$
+links por artigo, $\log_{100} 1{,}19 \cdot 10^6 \approx 3{,}0$; com o grau médio
+real, $\ln n / \ln 67{,}7 \approx 3{,}3$, que é o que o Erdős–Rényi faz (3,76).
+
+O curioso é que a Wikipédia é **um pouco mais longa** que o grafo aleatório,
+apesar dos hubs. A explicação está no grau de entrada: a mediana é 10 (contra
+~68 no aleatório). Os hubs encurtam o começo da corrida, mas o último passo
+tem que entrar por um dos poucos artigos que linkam o destino. E há uma cauda
+longa: cadeias de artigos que só linkam o próximo da série (a maior distância
+vista foi 208), que no aleatório não existem.
+
+### 3.3 Hubs
+
+![graus](figuras/graus.png)
+
+Os graus de entrada têm cauda pesada (a curva fica quase reta na escala
+log-log por várias ordens de grandeza). O grau de saída é limitado pelo tamanho
+dos artigos e cai bruscamente perto de 1.000 (artigos com caixas de navegação
+grandes) e ~5.700 (listas gigantes).
+
+| maiores graus de entrada | | maiores graus de saída | |
+|---|---:|---|---:|
+| Estados Unidos | 185.206 | Lista de objetos NGC | 7.527 |
+| Brasil | 176.369 | Lista de municípios do Brasil por PIB | 5.802 |
+| Densidade populacional | 141.746 | ... por PIB (2016) | 5.780 |
+| International Standard Book Number | 132.770 | ... por PIB (2015) | 5.773 |
+| Base Virtual Internacional de Autoridade | 121.918 | ... por PIB per capita | 5.734 |
+| Território | 120.512 | | |
+| França | 109.142 | | |
+
+Vários hubs de entrada são "links de infraestrutura" vindos de predefinições
+(ISBN, controle de autoridade, densidade populacional, metro quadrado), não de
+conteúdo.
+
+**Removendo hubs.** Tiramos os $k$ artigos de maior grau de entrada (fazendo a
+BFS ignorar esses vértices) e medimos de novo, com 30 fontes:
+
+![hubs](figuras/hubs.png)
+
+Tirar os 100 maiores hubs quase não muda nada (4,31 → 4,44). Com 10.000
+removidos — só 0,84% dos artigos — a distância média sobe para 5,32 e os
+pares sem caminho quase dobram (9,1% → 16,9%): os hubs não são essenciais
+individualmente, mas o conjunto deles é o que segura o mundo pequeno.
+
+### 3.4 Assimetria
+
+Para 40 fontes $s$, uma BFS em $G$ dá $d(s, \cdot)$ e uma no transposto dá
+$d(\cdot, s)$, então comparamos $d(s, v)$ com $d(v, s)$ em 47 milhões de pares que
+têm caminho em pelo menos um sentido:
+
+* **37,8%** têm $d(u, v) = d(v, u)$;
+* **48,9%** têm caminho nos dois sentidos, mas com tamanhos diferentes;
+* **13,2%** só têm caminho num sentido ($d = \infty$ do outro lado).
+
+![assimetria](figuras/assimetria.png)
+
+Entre os pares com caminho nos dois sentidos, a diferença é quase sempre
+pequena (89% diferem em no máximo 1 clique). Ou seja, $d$ é uma quase-métrica
+de verdade (Apêndice A.4): a desigualdade triangular vale sempre, mas a simetria
+falha na maioria dos pares.
+
+<!-- BONUS -->
+
+<!-- EXPERIMENTO -->
 
 ## Apêndice A — Provas
 
