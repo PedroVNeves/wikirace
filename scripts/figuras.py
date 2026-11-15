@@ -194,25 +194,41 @@ def fig_curva_sucesso():
 
 
 def fig_tradeoff():
-    """A figura que responde a pergunta: quão perto do ótimo x quanto explora."""
-    resumo = pd.read_csv(EXPERIMENTO / "resumo.csv", index_col=0)
-    fig, ax = plt.subplots(figsize=(6.8, 4.2))
-    for a, r in resumo.iterrows():
-        if np.isnan(r.razao_media):
-            continue
-        ax.scatter(r.consultados_mediana, r.razao_media, s=40 + 160 * r.taxa_sucesso,
-                   color=cor_agente(a), edgecolor=FUNDO, linewidth=2, zorder=3)
-        ax.annotate(f"{nome_agente(a)}\n{r.taxa_sucesso:.0%} de sucesso",
-                    (r.consultados_mediana, r.razao_media), textcoords="offset points",
-                    xytext=(8, 0), va="center", fontsize=8, color=TEXTO)
+    """A figura que responde a pergunta: quão perto do ótimo x quanto explora.
+
+    Só partidas concluídas (as que bateram no teto de consultas ou de cliques
+    distorceriam a mediana) e só agentes com pelo menos 5 sucessos; o resto
+    fica na tabela do relatório. A* com w = 1 e w = 2 resolvem exatamente os
+    mesmos pares com os mesmos números, então viram um ponto só.
+    """
+    df = pd.read_csv(EXPERIMENTO / "partidas.csv")
+    ok = df[df.sucesso]
+    tab = ok.groupby("agente").agg(n=("par", "size"), consultados=("consultados", "median"),
+                                   razao=("razao", "mean"))
+    tab["taxa"] = tab["n"] / df.groupby("agente").size()
+    tab = tab[tab.n >= 5].drop(index="a_estrela_w2", errors="ignore")
+    rotulo = {"a_estrela_w1": "A* (w = 1 e 2)"}
+    # deslocamento (pontos) de cada rótulo, escolhido olhando a figura
+    desloc = {"bfs_bidirecional": (10, 0, "left"), "guloso_semantico": (10, 0, "left"),
+              "a_estrela_w8": (0, 22, "center"), "a_estrela_w4": (0, -26, "center"),
+              "a_estrela_w1": (12, 10, "left")}
+    fig, ax = plt.subplots(figsize=(6.8, 4.0))
+    ax.axhline(1, color=GRADE, linewidth=1, zorder=1)
+    for a, r in tab.iterrows():
+        ax.scatter(r.consultados, r.razao, s=50, color=cor_agente(a), edgecolor=FUNDO,
+                   linewidth=2, zorder=3)
+        dx, dy, ha = desloc.get(a, (10, 0, "left"))
+        ax.annotate(f"{rotulo.get(a, nome_agente(a))}\n{br(r.razao, 2)}× o ótimo, "
+                    f"{br(r.taxa, 0, True)} resolvidos",
+                    (r.consultados, r.razao), textcoords="offset points", xytext=(dx, dy),
+                    ha=ha, va="center", fontsize=8, color=TEXTO)
     ax.set_xscale("log")
-    ax.set_xlabel("artigos consultados (mediana, escala log)")
+    ax.set_xlim(5, 4e4)
+    ax.set_ylim(0, 5.6)
+    ax.set_xlabel("artigos consultados até chegar (mediana, escala log)")
     ax.set_ylabel("cliques usados / ótimo (média)")
     eixo_br(ax, 1)
     ax.set_title("Quanto se perde vs. quanto se explora")
-    ax.axhline(1, color=GRADE, linewidth=1, zorder=1)
-    xmin, xmax = ax.get_xlim()
-    ax.set_xlim(xmin, xmax * 6)
     salvar(fig, "tradeoff")
 
 
