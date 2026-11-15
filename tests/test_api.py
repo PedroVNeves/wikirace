@@ -137,3 +137,40 @@ def test_desiste_com_mensagem(monkeypatch):
     api = WikipediaAPI(sessao=SessaoFalsa(lambda p: RespostaFalsa({}, 429)))
     with pytest.raises(RuntimeError, match="HTTP 429"):
         api.resolve("Pelé")
+
+
+def test_primeiro_link_parenteses_que_fecham_dentro_de_trecho_pulado():
+    # igual à pronúncia em "França": o "(" está fora e o ")" dentro de um span pulado
+    html = ('<p><b>França</b> (em <a href="/wiki/L%C3%ADngua_francesa">francês</a>: '
+            '<span class="noprint">[fʁɑ̃s] ouvir)</span> é um '
+            '<a href="/wiki/Pa%C3%ADs">país</a>.</p>')
+    assert extrai_primeiro_link(html) == "País"
+
+
+def test_primeiro_link_em_desambiguacao():
+    html = ('<div class="mw-parser-output"><p><b>Topologia</b> pode referir-se a:</p>'
+            '<ul><li><a href="/wiki/Topografia">Topografia</a> - descrição</li></ul></div>')
+    assert extrai_primeiro_link(html) == "Topografia"
+
+
+def test_primeiro_link_fechamento_sem_abertura_nao_quebra():
+    html = '<p>texto</i> com <a href="/wiki/Ci%C3%AAncia">ciência</a></p>'
+    assert extrai_primeiro_link(html) == "Ciência"
+
+
+def test_primeiro_link_ignora_parenteses_de_css():
+    html = ('<p><style>.x{width:calc(1em}</style>Um <a href="/wiki/Bem">bem</a></p>')
+    assert extrai_primeiro_link(html) == "Bem"
+
+
+def test_primeiro_link_busca_pagina_inteira_se_introducao_nao_tem_link():
+    def responder(p):
+        if p.get("action") == "parse" and p.get("section") == 0:
+            return RespostaFalsa({"parse": {"text": "<p>Mercadoria é um bem.</p>"}})
+        if p.get("action") == "parse":
+            return RespostaFalsa({"parse": {"text": '<p>x</p><p><a href="/wiki/Bem">b</a></p>'}})
+        return RespostaFalsa({"query": {"pages": [{"ns": 0, "title": "Bem"}]}})
+
+    sessao = SessaoFalsa(responder)
+    assert WikipediaAPI(sessao=sessao).primeiro_link("Mercadoria") == "Bem"
+    assert [c.get("section") for c in sessao.chamadas if c["action"] == "parse"] == [0, None]

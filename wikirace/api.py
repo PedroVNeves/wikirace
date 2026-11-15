@@ -150,15 +150,22 @@ class WikipediaAPI:
 
     def primeiro_link(self, titulo):
         def busca(t):
-            dados = self._get(action="parse", page=t, prop="text", redirects=1,
-                              section=0, disabletoc=1)
-            if "error" in dados:
-                return ""
-            alvo = extrai_primeiro_link(dados["parse"]["text"])
+            # primeiro só a introdução (bem menor); se ela não tiver link
+            # nenhum (acontece em artigos curtos), a página inteira
+            alvo = None
+            for secao in ({"section": 0}, {}):
+                dados = self._get(action="parse", page=t, prop="text", redirects=1,
+                                  disabletoc=1, **secao)
+                if "error" in dados:
+                    return ""
+                alvo = extrai_primeiro_link(dados["parse"]["text"])
+                if alvo is not None:
+                    break
             if alvo is None:
                 return ""
             return self.resolve(alvo) or ""
-        return self._com_cache("primeiro", normaliza(titulo), busca) or None
+        # chave "primeiro2": o cache da versão antiga do parser tinha erros
+        return self._com_cache("primeiro2", normaliza(titulo), busca) or None
 
 
 # ------------------------------------------------- primeiro link do HTML
@@ -166,24 +173,32 @@ class _PrimeiroLink(HTMLParser):
     """Acha o primeiro link "de verdade" do texto de um artigo.
 
     Regras (as mesmas do jogo "todos os caminhos levam à Filosofia"):
-    só links dentro de parágrafos ``<p>`` do corpo; pula tabelas (infobox),
+    só links no texto corrido — parágrafos ``<p>`` e itens de lista ``<li>``
+    (as páginas de desambiguação são só listas); pula tabelas (infobox),
     notas de cabeçalho, referências ``<sup>``, texto em itálico e qualquer
     coisa entre parênteses; e só links para artigos (sem ``:``).
+
+    Os parênteses são contados em todo o texto do parágrafo, inclusive dentro
+    de trechos pulados: senão um "(" fora e o ")" dentro de um widget pulado
+    (acontecia na pronúncia de "França") deixam a conta desbalanceada. A conta
+    zera a cada parágrafo novo.
     """
 
     PULAR = {"table", "sup", "figure", "style", "script"}
+    VAZIAS = {"br", "img", "wbr", "link", "meta", "hr", "input", "source"}
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.pilha = []          # tags abertas (com marcação de "pular")
-        self.em_p = 0
+        self.em_texto = 0        # dentro de <p> ou <li>
         self.italico = 0
         self.pular = 0
+        self.codigo = 0          # dentro de <style>/<script> (CSS tem parênteses)
         self.parenteses = 0
         self.achado = None
 
     def handle_starttag(self, tag, attrs):
-        if self.achado is not None or tag in ("br", "img", "wbr", "link", "meta", "hr"):
+        if self.achado is not None or tag in self.VAZIAS:
             return
         attrs = dict(attrs)
         classes = (attrs.get("class") or "").split()
@@ -193,11 +208,13 @@ class _PrimeiroLink(HTMLParser):
                 or (tag == "span" and "IPA" in classes))
         self.pilha.append((tag, pula))
         self.pular += pula
-        if tag == "p":
-            self.em_p += 1
+        self.codigo += tag in ("style", "script")
+        if tag in ("p", "li"):
+            self.em_texto += 1
+            self.parenteses = 0
         if tag in ("i", "em"):
             self.italico += 1
-        if (tag == "a" and self.em_p and not self.pular and not self.italico
+        if (tag == "a" and self.em_texto and not self.pular and not self.italico
                 and self.parenteses == 0):
             href = attrs.get("href") or ""
             if href.startswith("/wiki/") and "new" not in classes:
@@ -206,21 +223,21 @@ class _PrimeiroLink(HTMLParser):
                     self.achado = alvo
 
     def handle_endtag(self, tag):
-        if self.achado is not None:
-            return
-        # fecha até achar a tag (HTML da Wikipédia é bem formado, mas por via das dúvidas)
+        if self.achado is not None or not any(t == tag for t, _ in self.pilha):
+            return  # fechamento sem abertura: ignora em vez de esvaziar a pilha
         while self.pilha:
             t, pula = self.pilha.pop()
             self.pular -= pula
-            if t == "p":
-                self.em_p -= 1
+            self.codigo -= t in ("style", "script")
+            if t in ("p", "li"):
+                self.em_texto -= 1
             if t in ("i", "em"):
                 self.italico -= 1
             if t == tag:
                 break
 
     def handle_data(self, data):
-        if self.achado is None and self.em_p and not self.pular:
+        if self.achado is None and self.em_texto and not self.codigo:
             for c in data:
                 if c == "(":
                     self.parenteses += 1
