@@ -89,8 +89,12 @@ O curioso é que a Wikipédia é **um pouco mais longa** que o grafo aleatório,
 apesar dos hubs. A explicação está no grau de entrada: a mediana é 10 (contra
 ~68 no aleatório). Os hubs encurtam o começo da corrida, mas o último passo
 tem que entrar por um dos poucos artigos que linkam o destino. E há uma cauda
-longa: cadeias de artigos que só linkam o próximo da série (a maior distância
-vista foi 208), que no aleatório não existem.
+longa que no aleatório não existe: cadeias de artigos que só linkam o próximo
+da série. O artigo mais distante de Pelé está a **207 cliques**: o caminho vai
+Pelé → Argentina → Terra → Lista de cometas periódicos → John Broughton →
+(35773) 1999 JT7 → (35774) 1999 JL9 → … → (35975) 1999 LG27, passando por
+duzentos asteroides numerados em sequência (cada artigo da série leva ao
+próximo, e não há atalho para o fim dela).
 
 ### 3.3 Hubs
 
@@ -98,8 +102,11 @@ vista foi 208), que no aleatório não existem.
 
 Os graus de entrada têm cauda pesada (a curva fica quase reta na escala
 log-log por várias ordens de grandeza). O grau de saída é limitado pelo tamanho
-dos artigos e cai bruscamente perto de 1.000 (artigos com caixas de navegação
-grandes) e ~5.700 (listas gigantes).
+dos artigos e tem dois "degraus" que fomos olhar de perto: perto de 1.000 há
+**659 artigos com exatamente 1.059 links** — todos navios americanos da série
+*USS LST-n*, que compartilham uma caixa de navegação com ~1.050 links para os
+outros navios da classe —, e perto de 5.700 estão as listas de municípios do
+Brasil (por PIB, por população etc.).
 
 | maiores graus de entrada | | maiores graus de saída | |
 |---|---:|---|---:|
