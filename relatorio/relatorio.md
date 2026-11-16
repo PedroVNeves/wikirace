@@ -64,6 +64,23 @@ mas que ninguém da componente gigante linka. Dos 108.182 artigos fora dela,
 "Freguesias de Abrantes ordenadas por área"). Por isso **9,1% dos pares
 $(u, v)$ não têm caminho**: o problema quase sempre é o destino, não a origem.
 
+**E fracamente conexo?** Também não. Esquecendo o sentido dos links (isto é,
+olhando o grafo não dirigido por trás de $G$), sobram **304 componentes
+fracamente conexas**: a maior tem 1.186.796 artigos (99,97%), há 2
+componentes de dois artigos (e.g. "Família Grando") e **301 vértices
+isolados**, com $\deg^+ = \deg^- = 0$ (e.g. "Igoe", "Bagre-mandim"): artigos
+que, no dump, não linkam nenhum outro artigo e não são linkados por nenhum.
+Isso explica quase todos os 316 "outros" da tabela acima: 305 deles estão
+fora da componente fraca gigante; os 11 restantes estão ligados a ela só por
+"tentáculos" que não passam pela CFC gigante. As componentes fracas saem de
+uma BFS que anda pelos links nos dois sentidos (`componentes_fracas` em
+`wikirace/analises.py`, 11 s) e dão a mesma partição do `scipy`.
+
+Resumindo a pergunta "a Wikipédia é conexa?": **não é fortemente conexa**
+(há pares sem caminho num sentido, como Pelé → Princípio de Premack) e
+**não é nem fracamente conexa** (há artigos sem ligação nenhuma). Mas as duas
+componentes gigantes têm 90,9% e 99,97% dos artigos.
+
 ### 3.2 Mundo pequeno
 
 Rodamos BFS completas a partir de 60 artigos sorteados (cada uma dá a distância
@@ -159,13 +176,38 @@ componente tem exatamente um ciclo. A ordem dos links não está nos dumps,
 então isso usa a API (`scripts/primeiro_link.py`, 150 artigos sorteados,
 1 requisição por segundo).
 
-**Situação: a rodar de novo.** Uma primeira execução mostrou que o
-extrator de "primeiro link" tinha falhas (não olhava listas de
-desambiguação, deixava um parêntese sem fechar no texto contaminar o artigo
-inteiro e desistia quando a introdução não tinha link); 23% das corridas
-terminavam "sem link" por isso. O extrator foi corrigido e testado, mas a
-nova execução ainda não terminou, então os números ficam para a próxima
-versão deste relatório — não vamos reportar os da versão com erro.
+**Resultado.** Das 150 corridas, 147 caíram num ciclo e 3 pararam porque o
+artigo de partida não tem link no texto (são só tabela: um quadro de medalhas
+e dois resultados de eleição). Apareceram só **7 ciclos**, e dois deles levam
+quase tudo:
+
+| ciclo | corridas que caem nele |
+|---|---:|
+| Administração → Ciências sociais → Ciência → Rigor → Autocracia → Forma de governo → Ciência política → Política → (Administração) | 67 (44,7%) |
+| Animalia → Organismo → Corpo → (Animalia) | 65 (43,3%) |
+| Aptidão física → Exercício físico | 7 |
+| Direito → Norma jurídica | 5 |
+| Ficção → Narrativa → Não ficção | 1 |
+| Teledramaturgia → Telenovela | 1 |
+| Fibra → Fibra de carbono → Fibra sintética | 1 |
+| (sem link) | 3 |
+
+* **88% das corridas terminam num dos dois ciclos grandes**: o das ciências
+  humanas (Política/Ciência) e o dos seres vivos (Animalia/Corpo). Exemplos:
+  Pelé → Futebolista → Trabalhador → … → Economia → Ciência, e
+  Capivara → Mamíferos → Vertebrados → Animalia.
+* **Filosofia não é o fim do caminho**, ao contrário da Wikipédia em inglês:
+  aqui ela fica na cauda (Filosofia → Humano → Primatas → Mamíferos →
+  Vertebrados → Animalia). 51 das 150 corridas (34%) passam por ela.
+* Até entrar no ciclo foram **10,6 cliques em média** (máximo 23).
+* **O lema confere nos dados:** no pedaço do grafo funcional que as corridas
+  descobriram (585 artigos), restrito aos vértices com $f$ definido dentro
+  dele, há 7 componentes e cada uma tem exatamente um ciclo.
+
+O cálculo usou o extrator corrigido (a primeira execução, com um extrator
+que errava listas, parênteses e introduções sem link, dava 23% de corridas
+"sem link"; esses números foram descartados). Fonte:
+`resultados/analises/primeiro_link.json`.
 
 ## 4. Agentes contra a BFS
 
@@ -285,8 +327,11 @@ nenhuma mas olha a corrida pelos dois lados.
 
 A demo (`scripts/jogar.py`) deixa a turma jogar exatamente os 100 pares do
 experimento e grava cada partida em `resultados/humanos.csv` (cliques, artigos
-lidos, tempo e caminho). **As partidas da turma ainda não foram coletadas**:
-esta seção será preenchida depois da apresentação. Uma partida de teste no par
+lidos, tempo e caminho), e `scripts/resumo_humanos.py` compara a turma com os
+agentes **nos mesmos pares** que ela jogou (taxa de chegada, razão
+cliques/ótimo e artigos lidos). **As partidas da turma são coletadas na
+apresentação**: esta seção recebe a tabela do `resumo_humanos.py` depois dela.
+Uma partida de teste no par
 da proposta (Pelé → Mecânica quântica) mostrou a comparação que a demo imprime
 no fim:
 
@@ -315,11 +360,15 @@ no fim:
 ## 5. Conclusão
 
 Modelar a Wikipédia como grafo dirigido explica bem o jogo: é um mundo pequeno
-(distância típica 4, 98,6% dos pares a no máximo 6 cliques), quase todo numa
-única componente fortemente conexa (90,9%), segurado por uns poucos milhares de
+(distância típica 4, 98,6% dos pares a no máximo 6 cliques), não é conexa
+(nem forte nem fracamente) mas está quase toda numa única componente
+fortemente conexa (90,9%), segurado por uns poucos milhares de
 hubs, e com distâncias bem assimétricas. A teoria também se confirmou nos dados:
 a BFS (bidirecional) é exata e baratíssima, e o A\* ponderado respeitou o
-limite $w \cdot$ ótimo em todas as partidas. Já a "intuição" semântica, sozinha,
+limite $w \cdot$ ótimo em todas as partidas, e o primeiro link caiu num ciclo
+em todas as corridas que tinham link, com um ciclo por componente, como a casa
+dos pombos garante (88% em só dois ciclos: Política/Ciência e
+Animalia/Corpo). Já a "intuição" semântica, sozinha,
 é uma heurística ruim para andar clique a clique: ela sabe *onde fica* o
 destino, mas cai em máximos locais. O que mais ajudou foi justamente a
 informação que nenhum caminhante tem — os links que chegam no destino.

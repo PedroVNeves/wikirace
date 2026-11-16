@@ -23,18 +23,26 @@ depois de ter teste passando e de eu revisar o código.
 - [x] **7. Experimento principal** — 100 pares sorteados, todos os agentes,
       métricas (razão cliques/ótimo, artigos consultados, taxa de sucesso).
 - [x] **8. Análises do grafo** — componentes fortemente conexas, mundo pequeno
-      vs. Erdős–Rényi, graus e hubs, assimetria. **Falta:** rodar de novo o
-      ciclo do primeiro link com o extrator corrigido.
+      vs. Erdős–Rényi, graus e hubs, assimetria, ciclo do primeiro link (rodado
+      de novo com o extrator corrigido: 7 ciclos, 88% em dois).
 - [x] **9. Demo** — a turma joga contra os agentes.
 - [x] **10. Relatório** — provas e resultados. (Em Markdown com LaTeX, que o
       GitHub renderiza; fica em `relatorio/relatorio.md`.)
 - [x] **11. Revisão final** — ruff limpo, 119 testes, checkout limpo passa,
       afirmações do relatório conferidas nos dados.
+- [x] **12. Conexidade fraca** — `componentes_fracas` (BFS andando pros dois
+      lados), conferida contra o scipy; parte `conexidade` no
+      `analisar_grafo.py`. Resposta: a Wikipédia não é nem fracamente conexa.
+- [x] **13. Apresentação** — `scripts/demo.py` (o grafo funcionando, parte por
+      parte), slides, roteiro (`docs/APRESENTACAO.md`), passo a passo de
+      instalação (`docs/COMO_RODAR.md`) e conceitos de grafos ligados à
+      Wikipédia (`docs/GRAFOS_NA_WIKIPEDIA.md`). Figuras em 300 dpi pro projetor.
 
 ## Pendências
 
-- [ ] Rodar `python scripts/primeiro_link.py` e escrever a seção 3.5.
-- [ ] Partidas da turma (`python scripts/jogar.py`) e seção 4.4.
+- [ ] Partidas da turma (`python scripts/jogar.py`) e seção 4.4. Só dá pra
+      fazer na apresentação; depois é rodar `python scripts/resumo_humanos.py`
+      e colar a tabela.
 
 ## Decisões
 
