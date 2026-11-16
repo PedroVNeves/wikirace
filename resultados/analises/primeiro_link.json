@@ -1,0 +1,1738 @@
+{
+  "inicios": 150,
+  "falhas_de_rede": [],
+  "artigos_visitados": 585,
+  "requisicoes": 4,
+  "sem_primeiro_link": 3,
+  "passaram_por_filosofia": 51,
+  "ciclos": [
+    {
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ],
+      "quantos_chegam": 67
+    },
+    {
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ],
+      "quantos_chegam": 65
+    },
+    {
+      "ciclo": [
+        "Aptidão_física",
+        "Exercício_físico"
+      ],
+      "quantos_chegam": 7
+    },
+    {
+      "ciclo": [
+        "Direito",
+        "Norma_jurídica"
+      ],
+      "quantos_chegam": 5
+    },
+    {
+      "ciclo": [],
+      "quantos_chegam": 3
+    },
+    {
+      "ciclo": [
+        "Ficção",
+        "Narrativa",
+        "Não_ficção"
+      ],
+      "quantos_chegam": 1
+    },
+    {
+      "ciclo": [
+        "Teledramaturgia",
+        "Telenovela"
+      ],
+      "quantos_chegam": 1
+    },
+    {
+      "ciclo": [
+        "Fibra",
+        "Fibra_de_carbono",
+        "Fibra_sintética"
+      ],
+      "quantos_chegam": 1
+    }
+  ],
+  "passos_ate_ciclo_media": 10.56,
+  "passos_ate_ciclo_max": 23,
+  "componentes_no_pedaco_fechado": 7,
+  "todas_com_um_ciclo": true,
+  "corridas": [
+    {
+      "inicio": "(37457)_4793_P-L",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Mr._Wu",
+      "passos_ate_ciclo": 2,
+      "ciclo": [
+        "Ficção",
+        "Narrativa",
+        "Não_ficção"
+      ]
+    },
+    {
+      "inicio": "Oxymeris_trochlea",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Marcelo_Arriagada",
+      "passos_ate_ciclo": 21,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Mar_de_Arafura",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Casi_ángeles_(3.ª_temporada)",
+      "passos_ate_ciclo": 1,
+      "ciclo": [
+        "Teledramaturgia",
+        "Telenovela"
+      ]
+    },
+    {
+      "inicio": "Sinoswertia",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Lars_Michaelsen",
+      "passos_ate_ciclo": 21,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Kamen",
+      "passos_ate_ciclo": 4,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Atelopus_sanjosei",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Conjunto_de_Khoja_Gaukushan",
+      "passos_ate_ciclo": 11,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "(31596)_Ragavender",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Universidade_de_Otago",
+      "passos_ate_ciclo": 16,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Forças_Armadas_Ruandesas",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "SS_Conte_Verde",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Pierre_Pujol",
+      "passos_ate_ciclo": 11,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Waldyr_Calheiros_Novaes",
+      "passos_ate_ciclo": 4,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Auzouville-Auberbosc",
+      "passos_ate_ciclo": 11,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Paulo_Madeira",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Direito",
+        "Norma_jurídica"
+      ]
+    },
+    {
+      "inicio": "Armeria_welwitschii_subsp._cinerea",
+      "passos_ate_ciclo": 16,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Miguel_Ramírez",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Aptidão_física",
+        "Exercício_físico"
+      ]
+    },
+    {
+      "inicio": "Alan_Reid_Smith",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Tao_(Mali)",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Onthophagus_fracticornis",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Wolfgang_I_de_Oettingen",
+      "passos_ate_ciclo": 7,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Stylonematophyceae",
+      "passos_ate_ciclo": 23,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Rudolf_Svensson",
+      "passos_ate_ciclo": 13,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Medrissa",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Alfred_Vail",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "DX_Cancri",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Vila_Celeste_(Ipatinga)",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Trimerotropis_occidentaloides",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Leptogenys_ritae",
+      "passos_ate_ciclo": 4,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Luís_Maria_Piquet",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Marisa_Lajolo",
+      "passos_ate_ciclo": 23,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Rodolfo_González",
+      "passos_ate_ciclo": 4,
+      "ciclo": [
+        "Aptidão_física",
+        "Exercício_físico"
+      ]
+    },
+    {
+      "inicio": "Ácido_orgânico_(desambiguação)",
+      "passos_ate_ciclo": 10,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Quadro_de_medalhas_de_saltos_ornamentais_na_Universíada_de_Verão_de_1970",
+      "passos_ate_ciclo": 1,
+      "ciclo": []
+    },
+    {
+      "inicio": "As_Tesmoforiantes",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Onthophagus_obscurior",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Eleições_presidenciais_portuguesas_de_2006_no_distrito_de_Santarém",
+      "passos_ate_ciclo": 1,
+      "ciclo": []
+    },
+    {
+      "inicio": "Simmerath",
+      "passos_ate_ciclo": 15,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Valdreu",
+      "passos_ate_ciclo": 13,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Windelsbach",
+      "passos_ate_ciclo": 13,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Namoro_casual",
+      "passos_ate_ciclo": 9,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Rremas",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Lorna_Raver",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Superfície_paleica",
+      "passos_ate_ciclo": 10,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "NGC_1502",
+      "passos_ate_ciclo": 7,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "My_Girl_(2005)",
+      "passos_ate_ciclo": 16,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Ellaria_Sand",
+      "passos_ate_ciclo": 6,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Dia_Mundial_do_Jogo_Limpo",
+      "passos_ate_ciclo": 15,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Cabo_Verde_nos_Jogos_Olímpicos_de_Verão_de_2020",
+      "passos_ate_ciclo": 15,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Mănești",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Campeonato_Mundial_de_Judô_de_2022_-_Até_52_kg_feminino",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Aldeia_de_Nogueira_(Oliveira_do_Hospital)",
+      "passos_ate_ciclo": 7,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Resolução_198_do_Conselho_de_Segurança_das_Nações_Unidas",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Regeneracionismo",
+      "passos_ate_ciclo": 9,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Tetraponera_rufipes",
+      "passos_ate_ciclo": 4,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "WCW_World_Television_Championship",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Batalha_de_Gásni_(1117)",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Apeadeiro_de_Avantos",
+      "passos_ate_ciclo": 17,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Joaquim_Ferreira_Penteado",
+      "passos_ate_ciclo": 6,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Medalhistas_olímpicos_do_rugby",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Aptidão_física",
+        "Exercício_físico"
+      ]
+    },
+    {
+      "inicio": "Yaho_(departamento)",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Hamptons_at_Boca_Raton",
+      "passos_ate_ciclo": 19,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Frank_Dixon",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Aptidão_física",
+        "Exercício_físico"
+      ]
+    },
+    {
+      "inicio": "Schoutenia",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Aedes_purpureipes",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Floresta_Fóssil_de_Teresina",
+      "passos_ate_ciclo": 18,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Toyohiko_Kagawa",
+      "passos_ate_ciclo": 7,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "The_Devil's_Brigade",
+      "passos_ate_ciclo": 23,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Johann_Bauschinger",
+      "passos_ate_ciclo": 11,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Acacia_gladiiformis",
+      "passos_ate_ciclo": 13,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Shintō_Musō-ryū",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Campeonato_Brasileiro_de_Futebol_de_1995",
+      "passos_ate_ciclo": 16,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Joachim_Prinz",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Marco_Júlio_Vestino_Ático",
+      "passos_ate_ciclo": 21,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Campeonato_de_São_Martinho_(França)_de_Futebol",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Aptidão_física",
+        "Exercício_físico"
+      ]
+    },
+    {
+      "inicio": "Cartão_de_referência",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "AMC_Networks_International",
+      "passos_ate_ciclo": 6,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Manuel_Sieuve_Zagalo_Nogueira",
+      "passos_ate_ciclo": 9,
+      "ciclo": [
+        "Direito",
+        "Norma_jurídica"
+      ]
+    },
+    {
+      "inicio": "Alfredo_Kraus",
+      "passos_ate_ciclo": 10,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Feliciano_de_Figueiredo",
+      "passos_ate_ciclo": 2,
+      "ciclo": [
+        "Direito",
+        "Norma_jurídica"
+      ]
+    },
+    {
+      "inicio": "Karim_Khudsiani",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Haidar_Ali",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Mamon",
+      "passos_ate_ciclo": 22,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "George_Siegmann",
+      "passos_ate_ciclo": 18,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Compains",
+      "passos_ate_ciclo": 11,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Imigração_brasileira_na_Alemanha",
+      "passos_ate_ciclo": 13,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Chaetosiphon",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Hemsbünde",
+      "passos_ate_ciclo": 15,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Sega_Activator",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Refinaria_Del_Norte",
+      "passos_ate_ciclo": 10,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Pedro_Paulo_de_Carvalho_Rosa",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Eleições_autárquicas_portuguesas_de_2017_no_distrito_de_Viseu",
+      "passos_ate_ciclo": 1,
+      "ciclo": []
+    },
+    {
+      "inicio": "Jörg_Demus",
+      "passos_ate_ciclo": 6,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Anfiteatro_de_Tours",
+      "passos_ate_ciclo": 13,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Conus_mustelinus",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Peschiera_(desambiguação)",
+      "passos_ate_ciclo": 13,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Giovanni_Minuzzo",
+      "passos_ate_ciclo": 7,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "1776",
+      "passos_ate_ciclo": 22,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Plan_(Isère)",
+      "passos_ate_ciclo": 11,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Leggiuno",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "NGC_4430",
+      "passos_ate_ciclo": 4,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Acocro_(distrito)",
+      "passos_ate_ciclo": 11,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Maizie_Williams",
+      "passos_ate_ciclo": 7,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Hadrosauroidea",
+      "passos_ate_ciclo": 15,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Esmeralda-de-cauda-azul",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Araçari-de-bico-de-marfim",
+      "passos_ate_ciclo": 15,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Elche_(desambiguação)",
+      "passos_ate_ciclo": 9,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Anthony_Grant",
+      "passos_ate_ciclo": 6,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Mórmons_fundamentalistas",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Árrio_Mécio_Graco",
+      "passos_ate_ciclo": 6,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Theodolinda_Hahnsson",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Sportverein_Alemannia_Haibach_1919_e.V.",
+      "passos_ate_ciclo": 15,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Eleições_autárquicas_de_2017_em_Odivelas",
+      "passos_ate_ciclo": 23,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Hamois",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Kudai_(banda_espanhola)",
+      "passos_ate_ciclo": 17,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "NGC_7196",
+      "passos_ate_ciclo": 4,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Encurralar_o_mercado",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Direito",
+        "Norma_jurídica"
+      ]
+    },
+    {
+      "inicio": "Colégio_dos_Jesuítas",
+      "passos_ate_ciclo": 7,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Teleférico_de_Massada",
+      "passos_ate_ciclo": 5,
+      "ciclo": [
+        "Fibra",
+        "Fibra_de_carbono",
+        "Fibra_sintética"
+      ]
+    },
+    {
+      "inicio": "Anchinia",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Codex_Vaticanus_2066",
+      "passos_ate_ciclo": 12,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "(34545)_2000_SB234",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Doctor_Slump",
+      "passos_ate_ciclo": 16,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Edgar_Brasil",
+      "passos_ate_ciclo": 18,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Roderic_Hill",
+      "passos_ate_ciclo": 16,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Papa_Dono",
+      "passos_ate_ciclo": 9,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Manuel_Joaquim_dos_Reis",
+      "passos_ate_ciclo": 4,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "1690",
+      "passos_ate_ciclo": 22,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Amelia_Belotti",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Aptidão_física",
+        "Exercício_físico"
+      ]
+    },
+    {
+      "inicio": "Natronobacterium",
+      "passos_ate_ciclo": 11,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Jean-Michel_Adam",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Vladimir_Torban",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Aptidão_física",
+        "Exercício_físico"
+      ]
+    },
+    {
+      "inicio": "Victoria_Kjær_Theilvig",
+      "passos_ate_ciclo": 6,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "BNT_1",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Crispim",
+      "passos_ate_ciclo": 16,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Bailarino",
+      "passos_ate_ciclo": 15,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Primitivo_(desambiguação)",
+      "passos_ate_ciclo": 3,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Estação_Oktiabrskoie_Pole",
+      "passos_ate_ciclo": 22,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Made_in_U.S.A.",
+      "passos_ate_ciclo": 19,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Boutros_Boutros-Ghali",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Direito",
+        "Norma_jurídica"
+      ]
+    },
+    {
+      "inicio": "Ápio_Júnio_Silano",
+      "passos_ate_ciclo": 21,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Riddlesworth_Hall",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "Billy_Bond_y_La_Pesada_del_Rock_and_Roll",
+      "passos_ate_ciclo": 18,
+      "ciclo": [
+        "Animalia",
+        "Organismo",
+        "Corpo"
+      ]
+    },
+    {
+      "inicio": "The_Dark_Backward",
+      "passos_ate_ciclo": 16,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Igreja_Matriz_de_Paderne",
+      "passos_ate_ciclo": 14,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    },
+    {
+      "inicio": "Hardwick_Hall",
+      "passos_ate_ciclo": 8,
+      "ciclo": [
+        "Administração",
+        "Ciências_sociais",
+        "Ciência",
+        "Rigor",
+        "Autocracia",
+        "Forma_de_governo",
+        "Ciência_política",
+        "Política"
+      ]
+    }
+  ]
+}
