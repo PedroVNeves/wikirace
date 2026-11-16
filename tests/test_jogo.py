@@ -49,3 +49,31 @@ def test_salvar_registro_acumula(tmp_path, amb):
         salvar_registro(arq, PartidaHumana(amb, 0, 1).registro())
     with open(arq, encoding="utf-8") as f:
         assert len(list(csv.DictReader(f))) == 2
+
+
+def test_resumir_humanos():
+    import pandas as pd
+
+    from wikirace.jogo import resumir_humanos
+    pares = pd.DataFrame({"par": [0, 1], "origem": [10, 20], "destino": [11, 21],
+                          "titulo_origem": ["A_b", "C"], "titulo_destino": ["D", "E"],
+                          "otimo": [2, 3]})
+    partidas = pd.DataFrame({
+        "par": [0, 0, 1, 1], "agente": ["bfs", "guloso", "bfs", "guloso"],
+        "otimo": [2, 2, 3, 3], "sucesso": [True, False, True, True],
+        "cliques": [2, None, 3, 6], "consultados": [5, 50, 8, 6]})
+    humanos = pd.DataFrame({
+        "jogador": ["ana", "ana", "bia"], "origem": ["A b", "Pelé", "A_b"],
+        "destino": ["D", "Brasil", "D"], "sucesso": ["True", "True", "False"],
+        "cliques": [4, 1, 7], "otimo": [None, 1, 2], "consultados": [4, 1, 7],
+        "segundos": [30.0, 10.0, 90.0]})
+    r = resumir_humanos(humanos, pares, partidas)
+    assert r["humanos"]["partidas"] == 3
+    assert r["humanos"]["razao_media"] == pytest.approx((4 / 2 + 1 / 1) / 2)
+    assert r["humanos_nos_pares_do_experimento"]["partidas"] == 2
+    assert r["pares_do_experimento_jogados"] == [0]
+    assert r["partidas_fora_do_experimento"] == 1
+    # agentes só no par 0, que foi o que a turma jogou
+    assert r["agentes_nos_mesmos_pares"]["guloso"]["taxa_sucesso"] == 0
+    assert r["agentes_nos_mesmos_pares"]["bfs"]["razao_media"] == 1
+    assert r["por_jogador"]["bia"]["taxa_sucesso"] == 0
