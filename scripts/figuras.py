@@ -68,7 +68,7 @@ def estilo():
         "grid.color": GRADE, "grid.linewidth": 0.6, "axes.axisbelow": True,
         "axes.spines.top": False, "axes.spines.right": False, "font.size": 10,
         "axes.titlesize": 11, "axes.titleweight": "bold", "legend.frameon": False,
-        "lines.linewidth": 2, "lines.markersize": 6, "figure.dpi": 150,
+        "lines.linewidth": 2, "lines.markersize": 6, "figure.dpi": 300,
     })
 
 
