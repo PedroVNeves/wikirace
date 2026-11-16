@@ -1,0 +1,70 @@
+{
+  "fortemente_conexo": false,
+  "num_componentes_fortes": 101368,
+  "maior_componente_forte": 1078919,
+  "fracamente_conexo": false,
+  "num_componentes_fracas": 304,
+  "maior_componente_fraca": 1186796,
+  "fracao_na_maior_fraca": 0.9997430715667833,
+  "fora_da_maior_fraca": 305,
+  "componentes_fracas_de_1_vertice": 301,
+  "isolados": 301,
+  "exemplos_isolados": [
+    "Igoe",
+    "Hino_de_Brasilia",
+    "Bagre-mandim",
+    "Bagre-boca-lisa",
+    "Bagre-do-natal",
+    "Bagre-guri",
+    "Bagre-juba",
+    "Bagre-malhado",
+    "Psicomotricidade_aquática",
+    "Rima_leonina"
+  ],
+  "maiores_fora_da_gigante": [
+    {
+      "tamanho": 2,
+      "exemplo": "Família_Grando"
+    },
+    {
+      "tamanho": 2,
+      "exemplo": "Mahjong_Quest"
+    },
+    {
+      "tamanho": 1,
+      "exemplo": "Arenque-branco"
+    },
+    {
+      "tamanho": 1,
+      "exemplo": "Aranhuço"
+    },
+    {
+      "tamanho": 1,
+      "exemplo": "Agulha-do-mar"
+    },
+    {
+      "tamanho": 1,
+      "exemplo": "Fábrica_de_Música"
+    },
+    {
+      "tamanho": 1,
+      "exemplo": "Moinho_coloidal"
+    },
+    {
+      "tamanho": 1,
+      "exemplo": "Clube_de_Montanha_do_Funchal"
+    },
+    {
+      "tamanho": 1,
+      "exemplo": "Lista_de_episódios_de_Captain_N:_The_Game_Master"
+    },
+    {
+      "tamanho": 1,
+      "exemplo": "Teste_ANPAD"
+    }
+  ],
+  "sem_link_de_entrada": 91644,
+  "sem_link_de_saida": 611,
+  "fracas_segundos": 10.6,
+  "fracas_igual_scipy": true
+}

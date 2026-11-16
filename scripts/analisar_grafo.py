@@ -4,7 +4,7 @@ Uso:
     python scripts/analisar_grafo.py                 # tudo
     python scripts/analisar_grafo.py scc hubs        # só algumas partes
 
-Partes: scc, distancias, hubs, assimetria.
+Partes: scc, conexidade, distancias, hubs, assimetria.
 Cada BFS no grafo inteiro leva ~3 s, então as amostras são de algumas dezenas
 de fontes — mas cada fonte dá a distância para todos os ~1,2 milhão de
 destinos, então são dezenas de milhões de pares.
@@ -131,8 +131,50 @@ def parte_assimetria(g, k=40):
     salva("assimetria", {"fontes": k, **analises.assimetria(g, fontes(g, k, SEMENTE + 2))})
 
 
-PARTES = {"scc": parte_scc, "distancias": parte_distancias, "hubs": parte_hubs,
-          "assimetria": parte_assimetria}
+def parte_conexidade(g):
+    """Responde direto: a Wikipédia é conexa? Forte e fracamente."""
+    arq_scc = config.DADOS / "scc_rotulos.npy"
+    forte = np.load(arq_scc) if arq_scc.exists() else analises.componentes_fortes(g)
+    t = time.time()
+    fraca = analises.componentes_fracas(g)
+    seg = time.time() - t
+    from scipy.sparse import csr_matrix
+    from scipy.sparse.csgraph import connected_components
+    mat = csr_matrix((np.ones(g.m, dtype=np.int8), g.indices, g.indptr), shape=(g.n, g.n))
+    k_scipy, rot_scipy = connected_components(mat, directed=True, connection="weak")
+    k_fraca = int(fraca.max()) + 1
+    confere = len(set(zip(fraca.tolist(), rot_scipy.tolist()))) == k_scipy == k_fraca
+
+    tam_fraca = np.bincount(fraca)
+    gigante = int(tam_fraca.argmax())
+    ge, gs = g.grau_entrada(), g.grau_saida()
+    isolados = np.flatnonzero((ge == 0) & (gs == 0))
+    # as maiores componentes fracas fora da gigante, com um exemplo de cada
+    outras = [c for c in np.argsort(tam_fraca)[::-1] if c != gigante][:10]
+    exemplos = [{"tamanho": int(tam_fraca[c]),
+                 "exemplo": g.titulo(int(np.flatnonzero(fraca == c)[0]))} for c in outras]
+    salva("conexidade", {
+        "fortemente_conexo": bool(forte.max() == 0),
+        "num_componentes_fortes": int(forte.max()) + 1,
+        "maior_componente_forte": int(np.bincount(forte).max()),
+        "fracamente_conexo": bool(k_fraca == 1),
+        "num_componentes_fracas": k_fraca,
+        "maior_componente_fraca": int(tam_fraca.max()),
+        "fracao_na_maior_fraca": float(tam_fraca.max() / g.n),
+        "fora_da_maior_fraca": int(g.n - tam_fraca.max()),
+        "componentes_fracas_de_1_vertice": int((tam_fraca == 1).sum()),
+        "isolados": int(len(isolados)),
+        "exemplos_isolados": [g.titulo(int(v)) for v in isolados[:10]],
+        "maiores_fora_da_gigante": exemplos,
+        "sem_link_de_entrada": int((ge == 0).sum()),
+        "sem_link_de_saida": int((gs == 0).sum()),
+        "fracas_segundos": round(seg, 1),
+        "fracas_igual_scipy": bool(confere),
+    })
+
+
+PARTES = {"scc": parte_scc, "conexidade": parte_conexidade, "distancias": parte_distancias,
+          "hubs": parte_hubs, "assimetria": parte_assimetria}
 
 
 def main():

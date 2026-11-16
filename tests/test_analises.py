@@ -29,6 +29,26 @@ def test_kosaraju_igual_scipy(n, m, semente):
     assert mesma_particao(nosso, deles)
 
 
+@pytest.mark.parametrize("n,m,semente", [(50, 30, 0), (100, 90, 1), (200, 400, 2),
+                                         (1000, 600, 3), (500, 0, 4)])
+def test_componentes_fracas_igual_scipy(n, m, semente):
+    g = grafo_aleatorio(n, m, semente)
+    nosso = analises.componentes_fracas(g)
+    mat = csr_matrix((np.ones(g.m), g.indices, g.indptr), shape=(n, n))
+    _, deles = connected_components(mat, directed=True, connection="weak")
+    assert mesma_particao(nosso, deles)
+
+
+def test_forte_vs_fraca():
+    # a -> b -> c: fracamente conexo (1 componente), mas 3 componentes fortes
+    g = Grafo.de_dicionario({"a": ["b"], "b": ["c"]})
+    assert len(set(analises.componentes_fracas(g).tolist())) == 1
+    assert len(set(analises.componentes_fortes(g).tolist())) == 3
+    # fecha o ciclo c -> a: agora é fortemente conexo
+    g = Grafo.de_dicionario({"a": ["b"], "b": ["c"], "c": ["a"]})
+    assert len(set(analises.componentes_fortes(g).tolist())) == 1
+
+
 @pytest.mark.parametrize("semente", range(5))
 def test_alcancar_mutuamente_eh_equivalencia(semente):
     # u ~ v  <=>  u alcança v e v alcança u  <=>  mesmo rótulo de componente

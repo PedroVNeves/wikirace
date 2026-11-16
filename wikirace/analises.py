@@ -83,6 +83,42 @@ def _ordem_de_termino(n, indptr, indices):
     return ordem
 
 
+def componentes_fracas(g):
+    """Componentes fracamente conexas: as de quando a gente esquece o sentido
+    das setas (u e v ficam juntos se dá pra ir de um ao outro andando pelos
+    links pra frente OU pra trás).
+
+    É uma BFS em camadas que olha os vizinhos de saída (em g) e os de entrada
+    (no transposto) ao mesmo tempo. A primeira BFS já pega quase o grafo
+    inteiro; o resto são pedacinhos.
+    """
+    gt = g.transposto()
+    rotulo = np.full(g.n, -1, dtype=np.int32)
+    rot = memoryview(rotulo)
+    c = 0
+    for r in range(g.n):
+        if rot[r] != -1:
+            continue
+        rotulo[r] = c
+        fronteira = np.array([r], dtype=np.int64)
+        while fronteira.size:
+            viz = np.concatenate([_vizinhos_de(g, fronteira), _vizinhos_de(gt, fronteira)])
+            novos = np.unique(viz[rotulo[viz] == -1])
+            rotulo[novos] = c
+            fronteira = novos.astype(np.int64)
+        c += 1
+    return rotulo
+
+
+def _vizinhos_de(g, fronteira):
+    """Todos os vizinhos de saída dos vértices da fronteira (com repetição)."""
+    inicio = g.indptr[fronteira]
+    tam = g.indptr[fronteira + 1] - inicio
+    total = int(tam.sum())
+    desloc = np.repeat(inicio - (np.cumsum(tam) - tam), tam)
+    return g.indices[desloc + np.arange(total)]
+
+
 def condensacao(g, rotulos):
     """Grafo das componentes: uma aresta C -> D se algum u ∈ C linka v ∈ D."""
     k = int(rotulos.max()) + 1
